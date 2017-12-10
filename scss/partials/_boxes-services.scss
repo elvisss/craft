@@ -1,0 +1,88 @@
+.boxes-services {
+  .box-service {
+    position: relative;
+    @include media-breakpoint-up(md) {
+      padding: 90px 0;
+    }
+    &.box-architecture {
+      background-color: $c-light-gray;
+      @include media-breakpoint-up(md) {
+        &:after {
+          position: absolute;
+          content: "";
+          border-color: transparent transparent transparent $c-light-gray;
+          border-width: 195px 0 195px 110px;
+          border-style: solid;
+          right: -55px;
+          top: 0;
+          bottom: 0;
+          z-index: 1;
+        }
+      }
+    }
+    &.box-construction {
+      background-color: $c-meidum-gray;
+      @include media-breakpoint-up(md) {
+        &:before {
+          position: absolute;
+          content: "";
+          width: 55px;
+          background-color: $c-meidum-gray;
+          top: 0;
+          left: -55px;
+          bottom: 0;
+        }
+      }
+    }
+    .box-service-wrap {
+      width: 380px;
+      margin: 0 auto;
+      text-align: center;
+      figure {
+        margin: 0;
+      }
+    }
+    .box-service-content {
+
+    }
+    .number-service {
+      h5 {
+        font-size: 100px;
+        line-height: 1.5;
+        color: white;
+        @include media-breakpoint-up(md) {
+          font-size: 140px;
+        }
+      }
+    }
+    .desc-service {
+      text-align: left;
+      .title-service {
+        h4 {
+          text-transform: uppercase;
+          font-size: 10px;
+          font-weight: bold;
+          color: $c-black;
+        }
+      }
+      .desc-service {
+        p {
+          color: white;
+          font-size: 10px;
+        }
+      }
+      @include media-breakpoint-up(md) {
+        .title-service {
+          h4 {
+            font-size: 14px;
+          }
+        }
+        .desc-service {
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

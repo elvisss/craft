@@ -1,0 +1,7 @@
+.btn {
+  &.btn-black {
+    background-color: $c-dark-gray;
+    color: white;
+    border-radius: 0;
+  }
+}

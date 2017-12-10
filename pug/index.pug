@@ -2,4 +2,102 @@ doctype html
 html(lang='es')
   include includes/head.pug
   body
-    h1 Hola <I>asda</I>
+    include includes/header.pug
+
+    section#main-section.fluid-full-section
+      #main-slider.swiper-container.swiper-button-white
+        .swiper-wrapper
+          mixin main-slide(title, content)
+            .swiper-slide
+              figure.main-banner-bg(style="background-image: url(images/home/banner1.jpg)")
+                img(src="images/home/banner1.jpg").d-md-none
+              .main-banner-content
+                .main-banner-wrapper
+                  .d-table
+                    .d-table-cell
+                      h3= title
+                      p= content
+          - var n = 0;
+          - var banner = {title: 'LOREM IPSUM LAUDATUM',content: 'dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+          while n < 4
+            - n++
+            +main-slide(banner.title + ' ' + n, banner.content)
+        .swiper-button-next
+        .swiper-button-prev
+
+    section#review-section.fluid-section
+      .container-fluid
+        .row
+          .col-12.col-md-2.text-center
+            .d-table
+              .d-table-cell
+                .d-block.d-md-none
+                  img(src="images/logo-black.png")
+                .d-none.d-md-block
+                  img(src="images/logo-black-vertical.png")
+          .col-12.col-md-7
+            .review-content
+              p Somos un equipo de arquitectos e ingenieros especializados en <b>Arquitectura Corporativa</b> y <b>Comercial</b>, desarrollamos los proyectos en un ambiente coloborativo el cual permite una mejor comunicación entre nuestras áreas, logrando objetivos para los proyectos que nos son confiados. Pertenecemos al grupo de <b>PGBC</b>, el ser socios estratégicos fomentamos y brindamos <b>soluciones que cuiden el medio ambiente</b> acortando el tiempo de retorno a la inversión realizada por cada proyecto. Nuestra experiencia como equipo se ve reflejada en todos nuestros proyectos, los cuales son realizadas de manera <b>personalizada</b> según la <b>necesidad de tiempo</b> y <b>costo</b>.
+          .col-12.col-md-3.text-center
+            .d-table
+              .d-table-cell
+                figure.peru-green
+                  img(src="images/peru-green.png")
+
+    section#home-services.fluid-section
+      .boxes-services
+        .row.no-gutters
+          .col-12.col-lg-6
+            .box-service.box-architecture
+              .box-service-content
+                .box-service-wrap
+                  .row.no-gutters
+                    .col-3
+                      .d-table
+                        .d-table-cell
+                          figure
+                            img(src="images/architecture.png")
+                    .col-3
+                      .number-service
+                        h5 1
+                    .col-6
+                      .d-table
+                        .d-table-cell
+                          .desc-service
+                            .title-service
+                              h4 ARQUITECTURE
+                            .desc-service
+                              p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              .sticky-service.d-none.d-lg-block
+                .sticky-service-content
+                  .d-table
+                    .d-table-cell
+                      h2 SERVICIOS
+          .col-12.col-lg-6
+            .box-service.box-construction
+              .box-service-wrap
+                .row.no-gutters
+                  .col-3
+                    .d-table
+                      .d-table-cell
+                        figure
+                          img(src="images/construction.png")
+                  .col-3
+                    .number-service
+                      h5 2
+                  .col-6
+                    .d-table
+                      .d-table-cell
+                        .desc-service
+                          .title-service
+                            h4 CONSTRUCCIÓN
+                          .desc-service
+                            p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              .sticky-more.d-none.d-lg-block
+                a.btn-more(href="#")
+                  span VER MÁS
+          .col-12.d-block.d-lg-none
+            a.btn.btn-black.btn-block(href="#") VER MÁS
+
+    include includes/footer.pug
+    script(src="js/index.js",type="text/javascript")

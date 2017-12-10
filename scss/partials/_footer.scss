@@ -1,0 +1,41 @@
+#main-footer {
+  background-color: black;
+  padding: 20px 0 40px;
+  @include media-breakpoint-up(md) {
+    padding: 40px 0 30px;
+  }
+  .wrapper-footer {
+    text-align: center;
+  }
+  .social-content {
+    h4 {
+      color: $c-green;
+      font-size: 7.5px;
+      margin-bottom: 5px;
+      @include media-breakpoint-up(md) {
+        font-size: 13px;
+      }
+    }
+    .social-links {
+      li {
+        margin: 6px 4px;
+        a {
+          background-color: red;
+        }
+      }
+    }
+  }
+  .content-footer {
+    padding-top: 5px;
+    @include media-breakpoint-up(md) {
+      padding-top: 15px;
+    }
+    p {
+      color: white;
+      font-size: 9px;
+      @include media-breakpoint-up(md) {
+        font-size: 15px;
+      }
+    }
+  }
+}
