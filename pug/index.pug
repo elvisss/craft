@@ -99,5 +99,107 @@ html(lang='es')
           .col-12.d-block.d-lg-none
             a.btn.btn-black.btn-block(href="#") VER MÁS
 
+    section#brands-section.fluid-section
+      .wrap-brands
+        .wrap-brands-container
+          #brands-slider.swiper-container
+            .swiper-wrapper
+              .swiper-slide
+                .brand-slide
+                  .d-table
+                    .d-table-cell
+                      img(src="images/brands/informese.png")
+              .swiper-slide
+                .brand-slide
+                  .d-table
+                    .d-table-cell
+                      img(src="images/brands/juan-valdez.png")
+              .swiper-slide
+                .brand-slide
+                  .d-table
+                    .d-table-cell
+                      img(src="images/brands/kfc.png")
+              .swiper-slide
+                .brand-slide
+                  .d-table
+                    .d-table-cell
+                      img(src="images/brands/ministerio-de-educacion.png")
+              .swiper-slide
+                .brand-slide
+                  .d-table
+                    .d-table-cell
+                      img(src="images/brands/osinergmin.png")
+          .swiper-button-next
+          .swiper-button-prev
+
+    section#comunity-section.fluid-section
+      .container
+        #comunnity-slider.swiper-container
+          .swiper-wrapper
+            .swiper-slide
+              .row
+                .col-12.col-md-4
+                  figure.comunnity-img
+                    img(src="images/testi1.png")
+                .col-12.col-md-8
+                  .comunnity-wrapper
+                    .comunnity-content
+                      p “Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+                    .comunnity-desc
+                      .comunnity-name JENNIFER WALTERS
+                      .comunnity-role GERENTE GENERAL ST.GUCHÓN
+            .swiper-slide
+              .row
+                .col-12.col-md-4
+                  figure.comunnity-img
+                    img(src="images/testi1.png")
+                .col-12.col-md-8
+                  .comunnity-wrapper
+                    .comunnity-content
+                      p “Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+                    .comunnity-desc
+                      .comunnity-name JENNIFER WALTERS
+                      .comunnity-role GERENTE GENERAL ST.GUCHÓN
+            .swiper-slide
+              .row
+                .col-12.col-md-4
+                  figure.comunnity-img
+                    img(src="images/testi1.png")
+                .col-12.col-md-8
+                  .comunnity-wrapper
+                    .comunnity-content
+                      p “Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+                    .comunnity-desc
+                      .comunnity-name JENNIFER WALTERS
+                      .comunnity-role GERENTE GENERAL ST.GUCHÓN
+          .swiper-pagination
+
+    section#contact-section.fluid-section
+      #googlemaps
+      #box-contact
+        .body-contact
+          h4 CONTÁCTANOS
+          .box-contact-wrap
+            .box-contact-single.contact-address
+              .d-table
+                .d-table-cell
+                  p Av. Cotralmirante Montero<br /> N° 421 Of. 6D - Magdalena del Mar
+            .box-contact-single.contact-phone
+              .d-table
+                .d-table-cell
+                  p (51) 01-715672
+            .box-contact-single.contact-email
+              .d-table
+                .d-table-cell
+                  p
+                    a(href="mailto:jgalindo@craft.com.pe") jgalindo@craft.com.pe
+            .box-contact-single.contact-web
+              .d-table
+                .d-table-cell
+                  p
+                    a(href="http://www.craft.com.pe") craft.com.pe
+
+
     include includes/footer.pug
+    script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBX4D2ABvJBlhKbjCE5vOF2PAr9fjDRp7I")
     script(src="js/index.js",type="text/javascript")

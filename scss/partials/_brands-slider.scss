@@ -1,0 +1,32 @@
+#brands-section {
+  padding: 60px 0 30px;
+  @include media-breakpoint-up(md) {
+    padding: 95px 0 60px;
+  }
+  .wrap-brands {
+    padding: 0 10px;
+    @include media-breakpoint-up(md) {
+      padding: 0 60px;
+    }
+  }
+  .wrap-brands-container {
+    padding: 0 40px;
+    position: relative;
+  }
+  .brand-slide {
+    margin: 0;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    img {
+      @include media-breakpoint-down(lg) {
+        @include transform(scale(.5));
+      }
+      max-width: 100%;
+    }
+  }
+}
+
+#brands-slider {
+
+}
