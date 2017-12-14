@@ -1,0 +1,151 @@
+doctype html
+html(lang='es')
+  include includes/head.pug
+  body
+    include includes/header.pug
+
+    .content-page
+      section#home-services.fluid-section
+        .boxes-services.with-arrow
+          .row.no-gutters
+            .col-12.col-lg-6
+              .box-service.box-architecture
+                .box-service-content
+                  .box-service-wrap
+                    .row.no-gutters
+                      .col-3
+                        .d-table
+                          .d-table-cell
+                            figure
+                              img(src="images/architecture.png")
+                      .col-3
+                        .number-service
+                          h5 1
+                      .col-6
+                        .d-table
+                          .d-table-cell
+                            .desc-service
+                              .title-service
+                                h4 ARQUITECTURE
+                              .desc-service
+                                p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            .col-12.col-lg-6
+              .box-service.box-construction
+                .box-service-wrap
+                  .row.no-gutters
+                    .col-3
+                      .d-table
+                        .d-table-cell
+                          figure
+                            img(src="images/construction.png")
+                    .col-3
+                      .number-service
+                        h5 2
+                    .col-6
+                      .d-table
+                        .d-table-cell
+                          .desc-service
+                            .title-service
+                              h4 CONSTRUCCIÓN
+                            .desc-service
+                              p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+
+    .wrap-process-nav.d-none.d-lg-block
+      #services-process-nav
+        mixin process(val, index)
+          .box-nav-process(class=index % 2 == 0 ? '' : 'box-nav-top')
+            .box-nav-number
+              span=index >= 9 ? index + 1 : "0" + (index + 1)
+            .box-nav-text
+              span=val
+
+        //- each val, index in ['conceptualización', 'distribución espacial', 'planimetria arquitectónica', 'selección de acabados', 'ingenierías de detalle', 'ejecución', 'implementación de mobiliano', 'planificación', 'control de calidad', 'cierre', 'conceptualización', 'distribución espacial', 'planimetria arquitectónica', 'selección de acabados', 'ingenierías de detalle', 'ejecución', 'implementación de mobiliano', 'planificación', 'control de calidad', 'cierre']
+        each val, index in ['conceptualización', 'distribución espacial', 'planimetria arquitectónica', 'selección de acabados', 'ingenierías de detalle', 'ejecución', 'implementación de mobiliano', 'planificación', 'control de calidad', 'cierre']
+            +process(val, index)
+
+      #services-process
+          mixin process-content(val, index)
+            .single-process
+              .row
+                .col-12.col-lg-3.col-xl-2
+                  figure.single-process-img
+                    - img="images/process/proceso" + (index + 1) + ".svg"
+                    img(src=img)
+                .col-12.col-lg-6.col-xl-7
+                  .d-table
+                    .d-table-cell
+                      .single-process-content
+                        h3=val
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          each val, index in ['conceptualización', 'distribución espacial', 'planimetria arquitectónica', 'selección de acabados', 'ingenierías de detalle', 'ejecución', 'implementación de mobiliano', 'planificación', 'control de calidad', 'cierre']
+              +process-content(val, index)
+    .wrap-process-nav.d-block.d-lg-none
+      .boxes-plans
+        #plans-accordion(role='tablist')
+            .card.content-plan
+                #headingOne.card-header(role='tab')
+                  h2.mb-0
+                      a(data-toggle='collapse', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                          | 01. conceptualización
+                          .accordion-ico
+                              .horizontal
+                              .vertical
+                #collapseOne.collapse.show(role='tabpanel', aria-labelledby='headingOne', data-parent='#plans-accordion')
+                  .card-body.box-plan
+                      .row
+                        .col-4
+                          figure.single-process-img
+                            img(src="images/process/proceso1.svg")
+                        .col-8
+                          .d-table
+                            .d-table-cell
+                              .single-process-content
+                                h3=val
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+
+            .card.content-plan
+                #headingTwo.card-header(role='tab')
+                    h2.mb-0
+                        a.collapsed(data-toggle='collapse', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                            | 02. distribución espacial
+                            .accordion-ico
+                                .horizontal
+                                .vertical
+                #collapseTwo.collapse(role='tabpanel', aria-labelledby='headingTwo', data-parent='#plans-accordion')
+                    .card-body.box-plan
+                        .row
+                          .col-4
+                            figure.single-process-img
+                              img(src="images/process/proceso2.svg")
+                          .col-8
+                            .d-table
+                              .d-table-cell
+                                .single-process-content
+                                  h3=val
+                                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+
+            .card.content-plan
+                #headingThree.card-header(role='tab')
+                    h2.mb-0
+                        a.collapsed(data-toggle='collapse', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                            | 03. planimetria arquitectónica
+                            .accordion-ico
+                                .horizontal
+                                .vertical
+                #collapseThree.collapse(role='tabpanel', aria-labelledby='headingThree', data-parent='#plans-accordion')
+                    .card-body.box-plan
+                        .row
+                          .col-4
+                            figure.single-process-img
+                              img(src="images/process/proceso3.svg")
+                          .col-8
+                            .d-table
+                              .d-table-cell
+                                .single-process-content
+                                  h3=val
+                                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            
+
+    include includes/footer.pug
+    script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBX4D2ABvJBlhKbjCE5vOF2PAr9fjDRp7I")
+    script(src="js/servicios.js",type="text/javascript")

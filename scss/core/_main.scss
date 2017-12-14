@@ -70,3 +70,9 @@ a {
     vertical-align: middle;
   }
 }
+
+.content-page {
+  @include media-breakpoint-up(md) {
+    padding-top: 125px;
+  }
+}

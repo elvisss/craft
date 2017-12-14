@@ -1,0 +1,281 @@
+#services-process {
+  margin-bottom: 110px;
+  .single-process {
+    outline: none;
+    .single-process-img {
+      width: 205px;
+      height: 205px;
+      background-color: $c-medium-dark;
+      border-radius: 50%;
+      position: relative;
+      margin: 0;
+      img {
+        @include transform(translate(-50%, -50%));
+        width: 85px;
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+    }
+    .single-process-content {
+      @include media-breakpoint-up(xl) {
+        padding-left: 25px;
+      }
+      h3 {
+        color: $c-green-medium;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      p {
+        color: $c-meidum-gray;
+        font-size: 18px;
+        text-align: justify;
+      }
+    }
+  }
+
+}
+
+
+.boxes-plans {
+  h2 {
+    // color: $oc-black;
+    font-size: 21px;
+    line-height: 21px;
+    margin-bottom: 10px;
+    a {
+      // color: $oc-black;
+      display: block;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+  .bg-plan {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    &.bg-first-accordion {
+      @include media-breakpoint-up(md) {
+        background-image: url('../images/bg-first-accordion.jpg');
+      }
+    }
+    &.bg-second-accordion {
+      @include media-breakpoint-up(md) {
+        background-image: url('../images/bg-second-accordion.jpg');
+      }
+    }
+  }
+  .collapse {
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+  .card-header {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+    padding: 0;
+    h2 {
+      position: relative;
+      text-align: left;
+      [data-toggle="collapse"] {
+        color: white;
+        text-transform: uppercase;
+        padding: 0.75rem 1.25rem;
+        background-color: $c-green-medium;
+        .accordion-ico {
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          margin-top: -10px;
+          @include media-breakpoint-up(md) {
+            display: none;
+          }
+          .horizontal {
+            transition: all 0.5s ease-in-out;
+            transform: rotate(90deg);
+            opacity: 0;
+            position: absolute;
+            background-color: white;
+            width: 20px;
+            height: 2px;
+            left: 50%;
+            margin-left: -10px;
+            top: 50%;
+            margin-top: -1px;
+          }
+          .vertical {
+            transition: all 0.5s ease-in-out;
+            transform: rotate(90deg);
+            position: absolute;
+            background-color: white;
+            width: 2px;
+            height: 20px;
+            left: 50%;
+            margin-left: -1px;
+            top: 50%;
+            margin-top: -10px;
+          }
+        }
+        &.collapsed {
+          background-color: black;
+          .vertical {
+              transition: all 0.5s ease-in-out;
+              transform: rotate(-90deg);
+              background-color: $c-green-medium;
+          }
+          .horizontal {
+              transition: all 0.5s ease-in-out;
+              transform: rotate(-90deg);
+              opacity: 1;
+              background-color: $c-green-medium;
+          }
+        }
+      }
+    }
+  }
+  .content-plan {
+    border: medium none;
+    border-bottom: 2px solid white;
+    @include media-breakpoint-up(md) {
+      // border-right: 1px dashed $oc-gray-dark;
+      border-bottom: medium none;
+    }
+    &.last-content-plan {
+      border-right: medium none;
+    }
+    &.card {
+      background-color: transparent;
+      border-radius: 0;
+      .card-header {
+        text-align: center;
+      }
+    }
+  }
+  .box-plan {
+    padding: 25px 12.5px;
+    text-align: center;
+    // color: $oc-black;
+    .plan-content-price {
+      margin-bottom: 7px;
+      .plan-price {
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 12px;
+        span {
+          font-size: 10px;
+        }
+      }
+      .plan-taxes {
+        font-size: 10px;
+        line-height: 10px;
+      }
+    }
+    .plan-review {
+      font-size: 12px;
+      color: black;
+      margin-bottom: 5px;
+      .sub-review {
+        font-size: 10px;
+        p {
+          line-height: 22px;
+        }
+      }
+    }
+    ul {
+      &.plan-details {
+        li {
+          font-size: 10px;
+        }
+        p {
+        }
+        .plan-detail {
+          display: inline-block;
+          position: relative;
+          &:after {
+            content: "";
+            background-image: url('../images/plan-ico.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            position: absolute;
+            top: 2px;
+            left: -25px;
+            width: 14px;
+            height: 11px;
+            @include media-breakpoint-up(md) {
+              top: 5px;
+            }
+          }
+        }
+      }
+    }
+    h2 {
+      display: none;
+    }
+    @include media-breakpoint-up(md) {
+      padding-top: 100px;
+      padding-bottom: 70px;
+      h2 {
+        display: block;
+      }
+      .plan-content-price {
+        .plan-price {
+          font-size: 27px;
+          line-height: 27px;
+          span {
+            font-size: 13px;
+          }
+        }
+        .plan-taxes {
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
+      .plan-review {
+        font-size: 18px;
+        .sub-review {
+          font-size: 13.5px;
+        }
+      }
+      ul {
+        &.plan-details {
+          li {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .single-process-content {
+    text-align: left;
+  }
+
+  .single-process-img {
+    width: 95px;
+    height: 95px;
+    background-color: $c-medium-dark;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    img {
+      @include transform(translate(-50%, -50%));
+      width: 30px;
+      display: block;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+  }
+
+}

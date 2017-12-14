@@ -85,4 +85,23 @@
       }
     }
   }
+  &.with-arrow {
+    @include media-breakpoint-up(md) {
+      position: relative;
+      margin-bottom: 60px;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -60px;
+        margin-left: -315px;
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-left-width: 130px;
+        border-right-width: 130px;
+        border-top: 60px solid $c-green-medium;
+      }
+    }
+  }
 }
