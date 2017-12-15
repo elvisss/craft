@@ -1,5 +1,5 @@
 nav(class="navbar navbar-expand-md navbar-dark p-0")
-  .menu-logo.force-white.d-none.d-md-block
+  .menu-logo.force-white
     a.link-logo(href="#")
       include ./logo.pug
 
@@ -10,9 +10,6 @@ nav(class="navbar navbar-expand-md navbar-dark p-0")
       span
 
   div(class="collapse navbar-collapse",id="navbarMain")
-    .menu-logo.d-block.d-md-none
-      a.link-logo(href="#")
-        include ./logo.pug
     ul(class="navbar-nav navbar-custom justify-content-end align-items-center")
       mixin menu-item(href,name)
         li
@@ -24,20 +21,4 @@ nav(class="navbar navbar-expand-md navbar-dark p-0")
     .d-flex.d-md-none.justify-content-center
       nav.menu-footer
         p Síguenos en:
-        ul.social-links
-          li
-            a(href="#",target="_blank")
-              img(src="img/facebook.png")
-          li
-            a(href="#",target="_blank")
-              img(src="img/twitter.png")
-          li
-            a(href="#",target="_blank")
-              img(src="img/instagram.png")
-          li
-            a(href="#",target="_blank")
-              img(src="img/youtube.png")
-          li
-            a(href="#",target="_blank")
-              img(src="img/linkedin.png")
-        h5 ORIGAMI COWORK
+        include ./social-links.pug

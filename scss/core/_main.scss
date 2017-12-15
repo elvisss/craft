@@ -48,14 +48,12 @@ a {
   height: auto;
   width: 100%;
   position: relative;
-  overflow-x: hidden;
 }
 
 .fluid-full-section {
   height: auto;
   width: 100%;
   position: relative;
-  overflow-x: hidden;
   @include media-breakpoint-up(md) {
     height: 100%;
   }

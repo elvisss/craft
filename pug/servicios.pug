@@ -7,41 +7,85 @@ html(lang='es')
     .content-page
       section#home-services.fluid-section
         .boxes-services.with-arrow
-          .row.no-gutters
-            .col-12.col-lg-6
-              .box-service.box-architecture
-                .box-service-content
-                  .box-service-wrap
-                    .row.no-gutters
-                      .col-3
-                        .d-table
-                          .d-table-cell
-                            figure
-                              img(src="images/architecture.png")
-                      .col-3
-                        .number-service
-                          h5 1
-                      .col-6
-                        .d-table
-                          .d-table-cell
+          .box-service.box-architecture
+            .box-service-top.d-none.d-md-block
+              .box-servie-top-content
+                img(src="images/architecture.png")
+                h3 ARQUITECTURA
+                .service-back(data-section="left")
+                  a(href="#")
+                    img(src="images/back_icon.svg")
+            .box-service-wrapper
+              .box-service-wrap.box-service-toggle.fade.show(data-section="left")
+                .box-service-wrap-content
+                  .row.no-gutters
+                    .col-3
+                      .d-table
+                        .d-table-cell
+                          figure
+                            img(src="images/architecture.png")
+                    .col-2.col-md-3
+                      .number-service
+                        h5 1
+                    .col-5.col-md-6
+                      .d-table
+                        .d-table-cell
+                          .desc-service
+                            .title-service
+                              h4 ARQUITECTURA
                             .desc-service
-                              .title-service
-                                h4 ARQUITECTURE
-                              .desc-service
-                                p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            .col-12.col-lg-6
-              .box-service.box-construction
-                .box-service-wrap
+                              p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              .box-service-opened.fade
+                .box-service-opened-wrap
+                  .row.no-gutters.justify-content-center
+                    .col-12.col-md-4
+                      .box-service-opened-content
+                        .row.no-gutters
+                          .col-3
+                            .d-table
+                              .d-table-cell
+                                figure
+                                  img(src="images/arquitectura_oficinas.svg")
+                          .col-7.offset-2.offset-md-1
+                            .d-table
+                              .d-table-cell
+                                .desc-service
+                                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    .col-12.col-md-4
+                      .box-service-opened-content
+                        .row.no-gutters
+                          .col-3
+                            .d-table
+                              .d-table-cell
+                                figure
+                                  img(src="images/arquitectura_retail.svg")
+                          .col-7.offset-2.offset-md-1
+                            .d-table
+                              .d-table-cell
+                                .desc-service
+                                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        
+          .box-service.box-construction
+            .box-service-top.d-none.d-md-block
+              .box-servie-top-content
+                img(src="images/construction.png")
+                h3 CONSTRUCCIÓN
+                .service-back(data-section="right")
+                  a(href="#")
+                    img(src="images/back_icon.svg")
+            .box-service-wrapper
+              .box-service-wrap.box-service-toggle.fade.show(data-section="right")
+                .box-service-wrap-content
                   .row.no-gutters
                     .col-3
                       .d-table
                         .d-table-cell
                           figure
                             img(src="images/construction.png")
-                    .col-3
+                    .col-2.col-md-3
                       .number-service
                         h5 2
-                    .col-6
+                    .col-5.col-md-6
                       .d-table
                         .d-table-cell
                           .desc-service
@@ -49,6 +93,35 @@ html(lang='es')
                               h4 CONSTRUCCIÓN
                             .desc-service
                               p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              .box-service-opened.fade
+                .box-service-opened-wrap
+                  .row.no-gutters.justify-content-center
+                    .col-12.col-md-4
+                      .box-service-opened-content
+                        .row.no-gutters
+                          .col-3
+                            .d-table
+                              .d-table-cell
+                                figure
+                                  img(src="images/construccion_construccion.svg")
+                          .col-7.offset-2.offset-md-1
+                            .d-table
+                              .d-table-cell
+                                .desc-service
+                                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    .col-12.col-md-4
+                      .box-service-opened-content
+                        .row.no-gutters
+                          .col-3
+                            .d-table
+                              .d-table-cell
+                                figure
+                                  img(src="images/construccion_implementacion.svg")
+                          .col-7.offset-2.offset-md-1
+                            .d-table
+                              .d-table-cell
+                                .desc-service
+                                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 
     .wrap-process-nav.d-none.d-lg-block
       #services-process-nav
@@ -102,7 +175,6 @@ html(lang='es')
                               .single-process-content
                                 h3=val
                                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-
             .card.content-plan
                 #headingTwo.card-header(role='tab')
                     h2.mb-0
@@ -123,7 +195,6 @@ html(lang='es')
                                 .single-process-content
                                   h3=val
                                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-
             .card.content-plan
                 #headingThree.card-header(role='tab')
                     h2.mb-0
@@ -138,6 +209,146 @@ html(lang='es')
                           .col-4
                             figure.single-process-img
                               img(src="images/process/proceso3.svg")
+                          .col-8
+                            .d-table
+                              .d-table-cell
+                                .single-process-content
+                                  h3=val
+                                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            .card.content-plan
+                #headingFour.card-header(role='tab')
+                  h2.mb-0
+                      a.collapsed(data-toggle='collapse', href='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+                          | 04. selección de acabados
+                          .accordion-ico
+                              .horizontal
+                              .vertical
+                #collapseFour.collapse(role='tabpanel', aria-labelledby='headingFour', data-parent='#plans-accordion')
+                  .card-body.box-plan
+                      .row
+                        .col-4
+                          figure.single-process-img
+                            img(src="images/process/proceso4.svg")
+                        .col-8
+                          .d-table
+                            .d-table-cell
+                              .single-process-content
+                                h3=val
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            .card.content-plan
+                #headingFive.card-header(role='tab')
+                    h2.mb-0
+                        a.collapsed(data-toggle='collapse', href='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
+                            | 05. ingenierías de detalle
+                            .accordion-ico
+                                .horizontal
+                                .vertical
+                #collapseFive.collapse(role='tabpanel', aria-labelledby='headingFive', data-parent='#plans-accordion')
+                    .card-body.box-plan
+                        .row
+                          .col-4
+                            figure.single-process-img
+                              img(src="images/process/proceso5.svg")
+                          .col-8
+                            .d-table
+                              .d-table-cell
+                                .single-process-content
+                                  h3=val
+                                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            .card.content-plan
+                #headingSiz.card-header(role='tab')
+                    h2.mb-0
+                        a.collapsed(data-toggle='collapse', href='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
+                            | 06. ejecución
+                            .accordion-ico
+                                .horizontal
+                                .vertical
+                #collapseSix.collapse(role='tabpanel', aria-labelledby='headingSiz', data-parent='#plans-accordion')
+                    .card-body.box-plan
+                        .row
+                          .col-4
+                            figure.single-process-img
+                              img(src="images/process/proceso6.svg")
+                          .col-8
+                            .d-table
+                              .d-table-cell
+                                .single-process-content
+                                  h3=val
+                                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            .card.content-plan
+                #headingSeven.card-header(role='tab')
+                  h2.mb-0
+                      a.collapsed(data-toggle='collapse', href='#collapseSeven', aria-expanded='false', aria-controls='collapseSeven')
+                          | 07. implementación de mobiliano
+                          .accordion-ico
+                              .horizontal
+                              .vertical
+                #collapseSeven.collapse(role='tabpanel', aria-labelledby='headingSeven', data-parent='#plans-accordion')
+                  .card-body.box-plan
+                      .row
+                        .col-4
+                          figure.single-process-img
+                            img(src="images/process/proceso7.svg")
+                        .col-8
+                          .d-table
+                            .d-table-cell
+                              .single-process-content
+                                h3=val
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            .card.content-plan
+                #headingEight.card-header(role='tab')
+                    h2.mb-0
+                        a.collapsed(data-toggle='collapse', href='#collapseEight', aria-expanded='false', aria-controls='collapseEight')
+                            | 08. planificación
+                            .accordion-ico
+                                .horizontal
+                                .vertical
+                #collapseEight.collapse(role='tabpanel', aria-labelledby='headingEight', data-parent='#plans-accordion')
+                    .card-body.box-plan
+                        .row
+                          .col-4
+                            figure.single-process-img
+                              img(src="images/process/proceso2.svg")
+                          .col-8
+                            .d-table
+                              .d-table-cell
+                                .single-process-content
+                                  h3=val
+                                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            .card.content-plan
+                #headingNine.card-header(role='tab')
+                    h2.mb-0
+                        a.collapsed(data-toggle='collapse', href='#collapseNine', aria-expanded='false', aria-controls='collapseNine')
+                            | 09. control de calidad
+                            .accordion-ico
+                                .horizontal
+                                .vertical
+                #collapseNine.collapse(role='tabpanel', aria-labelledby='headingNine', data-parent='#plans-accordion')
+                    .card-body.box-plan
+                        .row
+                          .col-4
+                            figure.single-process-img
+                              img(src="images/process/proceso9.svg")
+                          .col-8
+                            .d-table
+                              .d-table-cell
+                                .single-process-content
+                                  h3=val
+                                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            .card.content-plan
+                #headingTen.card-header(role='tab')
+                    h2.mb-0
+                        a.collapsed(data-toggle='collapse', href='#collapseTen', aria-expanded='false', aria-controls='collapseTen')
+                            | 10. cierre
+                            .accordion-ico
+                                .horizontal
+                                .vertical
+                #collapseTen.collapse(role='tabpanel', aria-labelledby='headingTen', data-parent='#plans-accordion')
+                    .card-body.box-plan
+                        .row
+                          .col-4
+                            figure.single-process-img
+                              img(src="images/process/proceso10.svg")
                           .col-8
                             .d-table
                               .d-table-cell

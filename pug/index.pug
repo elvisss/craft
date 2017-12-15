@@ -46,36 +46,31 @@ html(lang='es')
 
     section#home-services.fluid-section
       .boxes-services
-        .row.no-gutters
-          .col-12.col-lg-6
-            .box-service.box-architecture
-              .box-service-content
-                .box-service-wrap
-                  .row.no-gutters
-                    .col-3
-                      .d-table
-                        .d-table-cell
-                          figure
-                            img(src="images/architecture.png")
-                    .col-3
-                      .number-service
-                        h5 1
-                    .col-6
-                      .d-table
-                        .d-table-cell
+        .box-service.box-architecture
+          .box-service-wrapper
+            .box-service-wrap.box-service-toggle
+              .box-service-wrap-content
+                .row.no-gutters
+                  .col-3
+                    .d-table
+                      .d-table-cell
+                        figure
+                          img(src="images/architecture.png")
+                  .col-3
+                    .number-service
+                      h5 1
+                  .col-6
+                    .d-table
+                      .d-table-cell
+                        .desc-service
+                          .title-service
+                            h4 ARQUITECTURA
                           .desc-service
-                            .title-service
-                              h4 ARQUITECTURE
-                            .desc-service
-                              p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              .sticky-service.d-none.d-lg-block
-                .sticky-service-content
-                  .d-table
-                    .d-table-cell
-                      h2 SERVICIOS
-          .col-12.col-lg-6
-            .box-service.box-construction
-              .box-service-wrap
+                            p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        .box-service.box-construction
+          .box-service-wrapper
+            .box-service-wrap.box-service-toggle
+              .box-service-wrap-content
                 .row.no-gutters
                   .col-3
                     .d-table
@@ -93,12 +88,7 @@ html(lang='es')
                             h4 CONSTRUCCIÓN
                           .desc-service
                             p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              .sticky-more.d-none.d-lg-block
-                a.btn-more(href="#")
-                  span VER MÁS
-          .col-12.d-block.d-lg-none
-            a.btn.btn-black.btn-block(href="#") VER MÁS
-
+    
     section#brands-section.fluid-section
       .wrap-brands
         .wrap-brands-container

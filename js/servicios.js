@@ -1,5 +1,21 @@
 $(function(){
   $('.navbar-custom li:nth-child(3)').addClass('current-menu-item');
+  $('.navbar-custom').addClass('navbar-dark');
+
+  $('.box-service-toggle').on('click', function() {
+    var section = $(this).data('section');
+    $('.boxes-services').toggleClass('' + section + '-animate');
+    $(this).toggleClass('show').parents('.box-service').find('.box-service-opened').toggleClass('show');
+  });
+
+  $('.service-back').on('click', function(e) {
+    e.preventDefault();
+    var section = $(this).data('section');
+    $('.boxes-services').toggleClass('' + section + '-animate');
+    $(this).parents('.box-service').find('.box-service-toggle').toggleClass('show');
+    $(this).parents('.box-service').find('.box-service-opened').toggleClass('show')
+  });
+
 });
 
 $('#services-process').slick({
