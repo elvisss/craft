@@ -1,5 +1,17 @@
 #services-process-nav {
   padding: 100px 0;
+  .slick-current {
+    .box-nav-process {
+      .box-nav-number {
+        background-color: $c-green-medium;
+      } 
+      .box-nav-text {
+        span {
+          color: black;
+        }
+      }
+    }
+  }
   .box-nav-process {
     position: relative;
     padding: 60px 0;
@@ -26,9 +38,6 @@
       content: "";
       left: 0;
       right: 0;
-      // linear-gradient(to top, rgba(0,0,0,.7), transparent);
-       // @include linear-gradient(to top, rgba(0,0,0,.7), rgba(255,255,255,0));
-      // @include linear-gradient(to top, transparent, rgba(0,0,0,.7));
       background-image: linear-gradient(to right, $c-green 33%, rgba(255,255,255,0) 0%);
       background-position: bottom;
       background-size: 11px 1px;
