@@ -55,8 +55,17 @@
         }
         .fill-logo {
           fill: white;
-          @include media-breakpoint-up(md) {
-            fill: $c-medium-dark;
+          // @include media-breakpoint-up(md) {
+          //   fill: $c-medium-dark;
+          // }
+        }
+      }
+      &.menu-inverse {
+        .link-logo {
+          .fill-logo {
+            @include media-breakpoint-up(md) {
+              fill: $c-medium-dark;
+            }
           }
         }
       }

@@ -1,6 +1,7 @@
 $(function(){
   $('.navbar-custom li:nth-child(3)').addClass('current-menu-item');
   $('.navbar-custom').addClass('navbar-dark');
+  $('.menu-logo').addClass('menu-inverse');
 
   $('.box-service-toggle').on('click', function() {
     var section = $(this).data('section');

@@ -1,7 +1,25 @@
 .btn {
+	@include transition(.5s);
   &.btn-black {
     background-color: $c-dark-gray;
     color: white;
     border-radius: 0;
+  }
+  &.btn-green {
+  	background-color: $c-green-medium;
+  	color: white;
+  	border-radius: 0;
+  	&:hover {
+  		background-color: rgba($c-green-medium, .5);
+  	}
+  }
+  &.btn-transparent {
+  	background-color: transparent;
+  	color: white;
+  	border: 1px solid white;
+  	border-radius: 0;
+  	&:hover {
+  		background-color: rgba(black, .5)
+  	}
   }
 }

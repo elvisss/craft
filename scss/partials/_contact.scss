@@ -6,8 +6,15 @@
 }
 
 #googlemaps {
-  height: 100%;
-  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute !important;
+  @include media-breakpoint-up(md) {
+    position: relative !important;
+    height: 100%;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -20,11 +27,14 @@
 }
 
 #box-contact {
-  @include transform(translateY(-50%));
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
+  position: relative;
+  @include media-breakpoint-up(md) {
+    @include transform(translateY(-50%));
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
   .body-contact {
     h4 {
       text-align: center;
@@ -67,6 +77,12 @@
           &:hover {
             text-decoration: underline;
           }
+        }
+      }
+      .buttons-contact {
+        margin-top: 65px;
+        a {
+          font-size: 14px;
         }
       }
     }

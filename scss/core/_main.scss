@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, Helvetica;
+  font-family: $font-family-default;
   font-size: 15px;
   // background-color: gray;
 }
@@ -14,6 +14,7 @@ body {
 
 h1, h2, h3, h4, h5 {
   margin: 0;
+  font-family: $font-family-default;
 }
 
 p {
@@ -72,5 +73,14 @@ a {
 .content-page {
   @include media-breakpoint-up(md) {
     padding-top: 125px;
+  }
+}
+
+.main-wrapper {
+  height: 100%;
+  position: relative;
+  padding: 100px 0;
+  @include media-breakpoint-up(md) {
+    padding: 0;
   }
 }

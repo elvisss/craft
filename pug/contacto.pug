@@ -1,0 +1,120 @@
+doctype html
+html(lang='es')
+  include includes/head.pug
+  body
+    include includes/header.pug
+
+    section.fluid-full-section
+      .main-wrapper
+        #googlemaps
+        #box-contact
+          .body-contact
+            h4 CONTÁCTANOS
+            .box-contact-wrap
+
+              .boxes-contanct
+                .box-contact-single.contact-address
+                  .d-table
+                    .d-table-cell
+                      p Av. Cotralmirante Montero<br /> N° 421 Of. 6D - Magdalena del Mar
+                .box-contact-single.contact-phone
+                  .d-table
+                    .d-table-cell
+                      p (51) 01-715672
+                .box-contact-single.contact-email
+                  .d-table
+                    .d-table-cell
+                      p
+                        a(href="mailto:jgalindo@craft.com.pe") jgalindo@craft.com.pe
+                .box-contact-single.contact-web
+                  .d-table
+                    .d-table-cell
+                      p
+                        a(href="http://www.craft.com.pe") craft.com.pe
+
+              .buttons-contact
+                a.btn.btn-block.btn-transparent(href="#") CALIFÍCANOS EN FACEBOOK
+                a.btn.btn-block.btn-green(href="#", data-target=".modal-contact", data-toggle="modal") CUÉNTANOS DE TU PROYECTO
+                a.btn.btn-block.btn-transparent(href="#", data-target=".work-us", data-toggle="modal") TRABAJA CON NOSOTROS
+
+    .modal.fade.modal-contact(tabindex='-1', role='dialog', aria-hidden='true')
+        .modal-dialog.modal-lg
+            .modal-content.modal-body-bg-black
+                .modal-header
+                  button.close(type="button", data-dismiss="modal", aria-label="Close")
+                    span(aria-hidden="true") &times;
+                .modal-body
+                    .modal-body-form
+                      form
+                        h2 CUÉNTANOS DE TU PROYECTO
+                        .row
+                          .col-12.col-md-6
+                            .form-group
+                              label Nombre
+                              input.form-control(type="text", placeholder="")
+                          .col-12.col-md-6
+                            .form-group
+                              label E-mail
+                              input.form-control(type="email", placeholder="")
+                          .col-12.col-md-6
+                            .form-group
+                              label Empresa
+                              input.form-control(type="text", placeholder="")
+                          .col-12.col-md-6
+                            .form-group
+                              label Tamaño del proyecto (m<sup>2</sup>)
+                              input.form-control(type="number", placeholder="")
+                          .col-12.col-md-6
+                            .form-group
+                              label Servicio requerido
+                              select.form-control
+                                option 1
+                                option 2
+                          .col-12.col-md-6
+                            .form-group
+                              label Ubicación
+                              input.form-control(type="text", placeholder="")
+                          .col-12
+                            .form-group
+                              label Mensaje
+                              textarea.form-control(rows="4")
+                          .col-12
+                            button.btn.btn-block.btn-transparent(type="submit") ENVIAR
+
+    .modal.fade.modal.work-us(tabindex='-1', role='dialog', aria-hidden='true')
+        .modal-dialog.modal-lg
+            .modal-content.modal-body-bg-black
+                .modal-header
+                  button.close(type="button", data-dismiss="modal", aria-label="Close")
+                    span(aria-hidden="true") &times;
+                .modal-body
+                    .modal-body-form
+                      form
+                        h2 TRABAJA CON NOSOTROS
+                        .row
+                          .col-12.col-md-6
+                            .form-group
+                              label Nombre
+                              input.form-control(type="text", placeholder="")
+                          .col-12.col-md-6
+                            .form-group
+                              label E-mail
+                              input.form-control(type="email", placeholder="")
+                          .col-12
+                            .form-group
+                              label Puesto a postular
+                              input.form-control(type="text", placeholder="")
+                          .col-12
+                            .form-group
+                              label Adjuntar CV <span>(WORD / PDF)</span>
+                              input.form-control(type="file")
+                          .col-12
+                            .form-group
+                              label Mensaje
+                              textarea.form-control(rows="4")
+                          .col-12
+                            button.btn.btn-block.btn-transparent(type="submit") ENVIAR
+
+    include includes/footer.pug
+    script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBX4D2ABvJBlhKbjCE5vOF2PAr9fjDRp7I")
+    script(src="js/contacto.js",type="text/javascript")

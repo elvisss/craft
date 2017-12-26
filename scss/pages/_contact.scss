@@ -1,0 +1,46 @@
+.modal-body-form {
+	max-width: 540px;
+	margin: 0 auto;
+	padding: 0 20px;
+	h2 {
+		text-align: center;
+		font-size: 24px;
+		color: $c-green-medium;
+		margin-bottom: 30px;
+	}
+	form {
+		margin-bottom: 10px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 65px;
+		}
+	}
+	.form-group {
+		label {
+			font-family: $font-family-light;
+			font-size: 18px;
+			color: white;
+			@include media-breakpoint-up(md) {
+				font-size: 21px;
+			}
+			span {
+				font-size: 14px;
+			}
+		}
+		margin-bottom: .5rem;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.modal-content {
+	&.modal-body-bg-black {
+		background-color: black;
+	}
+	.modal-header {
+		border-bottom: none;
+	}
+	button.close {
+		color: white;
+	}
+}

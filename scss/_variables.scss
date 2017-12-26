@@ -1,4 +1,18 @@
 // fonts
+$font-family-roman:           HumanstRoman, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-italic:          HumanstItalic, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-bold:            HumanstBold, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-black:           HumanstBlack, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-light:           HumanstLight, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-light-italic:    HumanstLightItalic, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-bold-italic:     HumanstBoldItalic, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-cn-regular:      HumanstCnRegular, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-cn-bold:         HumanstCnBold, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-cn-black:        HumanstCnBlack, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-bt-roman:        HumanstBtRoman, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-bt-light:        HumanstBtLight, "Helvetica Neue", Arial, sans-serif !default;
+
+$font-family-default: $font-family-roman !default;
 
 // colors
 $c-gray: #545454;
