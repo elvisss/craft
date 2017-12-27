@@ -1,0 +1,211 @@
+doctype html
+html(lang='es')
+  include includes/head.pug
+  body
+    include includes/header.pug
+
+    #about-page
+        #main-about
+            .wrap-about
+                .container-about
+                    .top-about
+                        .row.align-items-center
+                            .col-lg-5.d-none.d-lg-block
+                                figure
+                                    img(src="images/logo.svg")
+                            .col-12.col-lg-7
+                                .about-desc
+                                    p Somos un equipo de arquitectos e ingenieros especializados en Arquitectura Corporativa y Comercial, desarrollamos los proyectos en un ambiente coloborativo el cual permite una mejor comunicación entre nuestras áreas, logrando objetivos para los proyectos que nos son confiados. Nuestra experiencia como equipo se ve reflejada en todos nuestros proyectos, los cuales son realizadas de manera personalizada según la necesidad de tiempo y costo.
+                    .container
+                        .body-about
+                            .row
+                                .col-12.col-lg-8
+                                    .about-list-boxes
+                                        .about-list-box
+                                            h4 MISIÓN
+                                            p Brindar una arquitectura innovadora y personalizada, identificándonos con las necesidades de cada uno de nuestros clientes convirtiéndonos así en parte importante de su crecimiento.
+                                        .about-list-box.box-right
+                                            h4 VISIÓN
+                                            p Ser el líder en el mercado peruano de Arquitectura corporativa destacados por nuestra creatividad e innovación.
+                                .col-4.d-none.d-lg-block
+                                    .box-floating
+                                        .box-floating-content
+                                            p Desarrollamos nuestros proyectos siempre pensando en potenciar la experiencia de los clientes frente a la marca.
+
+        #team-about
+            .panel-team.d-none.d-lg-block
+                .wrap-boxes-team
+                    h3 NUESTRO EQUIPO
+                    .main-boxes-team
+                        .boxes-team.clearfix
+                            .box-team
+                            .box-team
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                            .box-team.gray-1
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                            .box-team
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                            .box-team.gray-1
+                        .boxes-team.clearfix
+                            .box-team.gray-2
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                            .box-team
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                            .box-team.gray-1
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                            .box-team
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                            .box-team
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                        .boxes-team.clearfix
+                            .box-team
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                            .box-team.gray-2
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                            .box-team.gray-3
+                            .box-team.gray-2
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                            .box-team
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                        .boxes-team.clearfix
+                            .box-team.gray-2
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                            .box-team
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+                            .box-team.gray-3
+                        .boxes-team.clearfix
+                            .box-team.gray-2.box-team-last
+                                .single-panel
+                                    .box-team-name CARMEN JIMENEZ
+                                    .box-team-rol ARQUITECTA
+
+            .accordion-team.d-block.d-lg-none
+                h3 NUESTRO EQUIPO
+                #team-accordion(role='tablist')
+                    .card
+                        #headingOne.card-header(role='tab')
+                            h2.mb-0
+                                a(data-toggle='collapse', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                                    | Steve Tucker <span>Arquitecto</span>
+                                    .accordion-ico
+                                        .horizontal
+                                        .vertical
+                        #collapseOne.collapse.show(role='tabpanel', aria-labelledby='headingOne', data-parent='#team-accordion')
+                            .card-body
+                                .row.align-items-center
+                                    .col-3
+                                        figure
+                                            img(src="./images/profile.png", alt="")
+                                    .col-9
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    .card
+                        #headingTwo.card-header(role='tab')
+                            h2.mb-0
+                                a.collapsed(data-toggle='collapse', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                                    | Carmen Jimenez <span>Arquitectura</span>
+                                    .accordion-ico
+                                        .horizontal
+                                        .vertical
+                        #collapseTwo.collapse(role='tabpanel', aria-labelledby='headingTwo', data-parent='#team-accordion')
+                            .card-body
+                                .row.align-items-center
+                                    .col-3
+                                        figure
+                                            img(src="./images/profile.png", alt="")
+                                    .col-9
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    .card
+                        #headingThree.card-header(role='tab')
+                            h2.mb-0
+                                a.collapsed(data-toggle='collapse', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                                    | Steve Tucker <span>Arquitecto</span>
+                                    .accordion-ico
+                                        .horizontal
+                                        .vertical
+                        #collapseThree.collapse(role='tabpanel', aria-labelledby='headingThree', data-parent='#team-accordion')
+                            .card-body
+                                .row.align-items-center
+                                    .col-3
+                                        figure
+                                            img(src="./images/profile.png", alt="")
+                                    .col-9
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    .card
+                        #headingFour.card-header(role='tab')
+                            h2.mb-0
+                                a.collapsed(data-toggle='collapse', href='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+                                    | Carmen Jimenez <span>Arquitectura</span>
+                                    .accordion-ico
+                                        .horizontal
+                                        .vertical
+                        #collapseFour.collapse(role='tabpanel', aria-labelledby='headingFour', data-parent='#team-accordion')
+                            .card-body
+                                .row.align-items-center
+                                    .col-3
+                                        figure
+                                            img(src="./images/profile.png", alt="")
+                                    .col-9
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    .card
+                        #headingFive.card-header(role='tab')
+                            h2.mb-0
+                                a.collapsed(data-toggle='collapse', href='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
+                                    | Steve Tucker <span>Arquitecto</span>
+                                    .accordion-ico
+                                        .horizontal
+                                        .vertical
+                        #collapseFive.collapse(role='tabpanel', aria-labelledby='headingFive', data-parent='#team-accordion')
+                            .card-body
+                                .row.align-items-center
+                                    .col-3
+                                        figure
+                                            img(src="./images/profile.png", alt="")
+                                    .col-9
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    .card
+                        #headingSix.card-header(role='tab')
+                            h2.mb-0
+                                a.collapsed(data-toggle='collapse', href='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
+                                    | Carmen Jimenez <span>Arquitectura</span>
+                                    .accordion-ico
+                                        .horizontal
+                                        .vertical
+                        #collapseSix.collapse(role='tabpanel', aria-labelledby='headingSix', data-parent='#team-accordion')
+                            .card-body
+                                .row.align-items-center
+                                    .col-3
+                                        figure
+                                            img(src="./images/profile.png", alt="")
+                                    .col-9
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+
+    include includes/footer.pug
+    script(src="js/nosotros.js",type="text/javascript")
