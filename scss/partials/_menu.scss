@@ -21,7 +21,7 @@
       }
     }
   }
-  &.navbar-dark {
+  .navbar-dark & {
     @include media-breakpoint-up(md) {
       li {
         a {
