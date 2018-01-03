@@ -32,11 +32,9 @@ $panel-gray3: #EAEBED;
 				z-index: 1;
 				width: 155.56px;
 				height: 155.56px;
-				-webkit-transform: scaleY(0.5774) rotate(-45deg);
-				-ms-transform: scaleY(0.5774) rotate(-45deg);
-				transform: scaleY(0.5774) rotate(-45deg);
 				background-color: inherit;
 				left: 31.2183px;
+				@include transform(scaleY(0.5774) rotate(-45deg));
 			}
 			&:before {
 				top: -77.7817px;
@@ -66,8 +64,13 @@ $panel-gray3: #EAEBED;
 			&:not(:empty) {
 				cursor: pointer;
 				&:hover {
-					background-color: black;
-					color: white;
+					.media-container {
+						.media-content {
+							opacity: 1;
+							@include transition(1s);
+							@include transform(translate3d(0, 0, 0));
+						}
+					}
 				}
 			}
 			.single-panel {
@@ -89,6 +92,79 @@ $panel-gray3: #EAEBED;
 				text-transform: uppercase;
 				letter-spacing: 2px;
 			}
+
+			.media-container {
+				position: absolute;
+				width: 600px;
+				height: 400px;
+				top: 0;
+				opacity: .9;
+				pointer-events: none;
+				z-index: 3;
+				left: 50px;
+				@include transform(translateY(-50%));
+				.media-content {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					overflow: hidden;
+					opacity: 0;
+					// @include transform(translate3d(-10px, 10px, 0px));
+					.media {
+						width: 65%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						background-position: center;
+						background-size: cover;
+					}
+				}
+			}
+
+			&.box-team-animation-1 {
+				.media-container {
+					.media-content {
+						@include transform(translate3d(-10px, 10px, 0px));
+					}
+				}
+			}
+			&.box-team-animation-2 {
+				.media-container {
+					.media-content {
+						@include transform(translate3d(-10px, -10px, 0px));
+					}
+				}
+			}
+			&.box-team-animation-3 {
+				.media-container {
+					.media-content {
+						@include transform(translate3d(10px, 10px, 0px));
+					}
+				}
+			}
+			&.box-team-animation-4 {
+				.media-container {
+					.media-content {
+						@include transform(translate3d(10px, -10px, 0px));
+					}
+				}
+			}
+			&.box-team-animation-5 {
+				.media-container {
+					.media-content {
+						@include transform(translate3d(-10px, 10px, 0px));
+					}
+				}
+			}
+			&:nth-child(5) {
+				.media-container {
+					left: -250px;
+				}
+			}
+
 		}
 		&:nth-child(even) {
 			margin-left: 110px;;

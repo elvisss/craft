@@ -75,6 +75,22 @@
 #main-section {
     position: relative;
     z-index: 1;
+    .top-triangle {
+      position: absolute;
+      left: -175px;
+      top: 0;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-left-width: 270px;
+      border-right-width: 270px;
+      border-top: 160px solid $c-green;
+      z-index: 2;
+      opacity: .3;
+      @include media-breakpoint-up(lg) {
+        left: -90px;
+      }
+    }
 }
 
 #review-section {

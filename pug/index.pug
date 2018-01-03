@@ -24,6 +24,7 @@ html(lang='es')
             +main-slide(banner.title + ' ' + n, banner.content)
         .swiper-button-next
         .swiper-button-prev
+      .top-triangle.d-none.d-md-block
 
     section#review-section.fluid-section
       .container-fluid
@@ -165,29 +166,30 @@ html(lang='es')
           .swiper-pagination
 
     section#contact-section.fluid-section
-      #googlemaps
-      #box-contact
-        .body-contact
-          h4 CONTÁCTANOS
-          .box-contact-wrap
-            .box-contact-single.contact-address
-              .d-table
-                .d-table-cell
-                  p Av. Cotralmirante Montero<br /> N° 421 Of. 6D - Magdalena del Mar
-            .box-contact-single.contact-phone
-              .d-table
-                .d-table-cell
-                  p (51) 01-715672
-            .box-contact-single.contact-email
-              .d-table
-                .d-table-cell
-                  p
-                    a(href="mailto:jgalindo@craft.com.pe") jgalindo@craft.com.pe
-            .box-contact-single.contact-web
-              .d-table
-                .d-table-cell
-                  p
-                    a(href="http://www.craft.com.pe") craft.com.pe
+      .main-wrapper
+        #googlemaps
+        #box-contact
+          .body-contact
+            h4 CONTÁCTANOS
+            .box-contact-wrap
+              .box-contact-single.contact-address
+                .d-table
+                  .d-table-cell
+                    p Av. Cotralmirante Montero<br /> N° 421 Of. 6D - Magdalena del Mar
+              .box-contact-single.contact-phone
+                .d-table
+                  .d-table-cell
+                    p (51) 01-715672
+              .box-contact-single.contact-email
+                .d-table
+                  .d-table-cell
+                    p
+                      a(href="mailto:jgalindo@craft.com.pe") jgalindo@craft.com.pe
+              .box-contact-single.contact-web
+                .d-table
+                  .d-table-cell
+                    p
+                      a(href="http://www.craft.com.pe") craft.com.pe
 
 
     include includes/footer.pug

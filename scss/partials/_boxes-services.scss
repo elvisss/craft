@@ -207,6 +207,7 @@
         font-size: 100px;
         line-height: 1.5;
         color: white;
+        font-family: $font-family-bold;
         @include media-breakpoint-up(md) {
           font-size: 140px;
         }
@@ -237,19 +238,19 @@
   &.with-arrow {
     @include media-breakpoint-up(md) {
       position: relative;
-      margin-bottom: 60px;
+      margin-bottom: 145px;
       &:after {
         content: "";
         position: absolute;
         left: 50%;
-        bottom: -60px;
-        margin-left: -315px;
+        bottom: -145px;
+        margin-left: -495px;
         width: 0;
         height: 0;
         border: 0 solid transparent;
-        border-left-width: 130px;
-        border-right-width: 130px;
-        border-top: 60px solid rgba($c-green-medium, .5);
+        border-left-width: 220px;
+        border-right-width: 220px;
+        border-top: 145px solid rgba($c-green-medium, .5);
       }
     }
   }
