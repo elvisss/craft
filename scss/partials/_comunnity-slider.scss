@@ -49,7 +49,6 @@ $testi-body: #666566;
         font-size: 25px;
         font-family: $font-family-light-italic;
         @include media-breakpoint-up(md) {
-          font-family: $font-family-roman;
           font-size: 34px;
         }
       }

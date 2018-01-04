@@ -1,4 +1,5 @@
 .boxes-services {
+  position: relative;
   @include media-breakpoint-up(md) {
     &.left-animate {
       .box-service {
@@ -179,6 +180,14 @@
         z-index: 2;
         figure {
           margin: 0;
+          &.ico-service {
+            figcaption {
+              display: none;
+              font-family: $font-family-bold;
+              margin-top: 8px;
+              font-size: 15px;
+            }
+          }
         }
         @include media-breakpoint-up(md) {
           width: auto; 
@@ -215,13 +224,14 @@
     }
     .desc-service {
       text-align: left;
+      line-height: 1.1;
       p, h4 {
         font-size: 12px;
       }
       .title-service {
         h4 {
           text-transform: uppercase;
-          font-weight: bold;
+          font-family: $font-family-bold;
           color: $c-black;
         }
       }
@@ -244,14 +254,70 @@
         position: absolute;
         left: 50%;
         bottom: -145px;
-        margin-left: -495px;
+        margin-left: -545px;
         width: 0;
         height: 0;
         border: 0 solid transparent;
-        border-left-width: 220px;
-        border-right-width: 220px;
+        border-left-width: 245px;
+        border-right-width: 245px;
         border-top: 145px solid rgba($c-green-medium, .5);
       }
+    }
+  }
+  .view-more {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 90px;
+    z-index: 5;
+    a {
+      @include transform-origin(0px 0px);
+      @include transform(rotate(270deg) translateX(-100%));
+      background-color: $c-medium-dark;
+      color: white;
+      width: 500px;
+      height: 90px;
+      text-align: center;
+      line-height: 90px;
+      padding: 0;
+      letter-spacing: 2px;
+      font-size: 22px;
+    }
+  }
+  .title-section {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    background-color: $c-medium-dark;
+    z-index: 5;
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-bottom-width: 250px;
+      border-top-width: 250px;
+      border-left: 112px solid $c-medium-dark;
+      position: absolute;
+      top: 0;
+      left: 30px;
+    }
+    h5 {
+      @include transform-origin(0px 0px);
+      @include transform(rotate(270deg) translateX(-100%));
+      width: 500px;
+      height: 30px;
+      text-align: center;
+      padding: 0;
+      color: white;
+      letter-spacing: 2px;
+      font-size: 22px;
+      position: relative;
+      margin-left: 40px;
+      z-index: 6;
     }
   }
 }

@@ -1,5 +1,5 @@
 #services-process {
-  margin-bottom: 110px;
+  padding-bottom: 110px;
   .single-process {
     outline: none;
     .single-process-img {
@@ -36,9 +36,39 @@
       }
     }
   }
-
 }
 
+.wrap-process-carousel {
+  position: relative;
+  .process-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 350px;
+    height: 55px;
+    background-color: $c-medium-dark;
+    text-align: center;
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-right-width: 175px;
+      border-left-width: 175px;
+      border-bottom: 100px solid $c-medium-dark;
+      position: absolute;
+      left: 0;
+      top: -100px;
+      z-index: 1;
+    }
+    h5 {
+      color: white;
+      font-size: 25px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
 
 .boxes-plans {
   h2 {

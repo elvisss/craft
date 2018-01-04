@@ -41,7 +41,7 @@ $about-res: lg;
 						line-height: 24px;
 					}
 					@include media-breakpoint-up($about-res) {
-						background-color: $box-black;
+						background-color: rgba($box-black, .6);
 						padding: 40px 100px 25px 45px;
 						p {
 							color: white;

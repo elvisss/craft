@@ -17,6 +17,16 @@
     padding: 60px 0;
     cursor: pointer;
     outline: none;
+    &:first-child {
+      &:after {
+        left: 50%;
+      }
+    }
+    &:last-child {
+      &:after {
+        right: 50%;
+      }
+    }
     &:hover {
       .box-nav-number {
         background-color: $c-green;

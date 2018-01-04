@@ -37,29 +37,27 @@ html(lang='es')
                               p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               .box-service-opened.fade
                 .box-service-opened-wrap
-                  .row.no-gutters.justify-content-center
-                    .col-12.col-md-4
+                  .row.no-gutters.justify-content-center.align-items-center
+                    .col-12.col-md-5
                       .box-service-opened-content
                         .row.no-gutters
-                          .col-3
-                            .d-table
-                              .d-table-cell
-                                figure
-                                  img(src="images/arquitectura_oficinas.svg")
-                          .col-7.offset-2.offset-md-1
+                          .col-2.col-md-3.offset-1.offset-md-1
+                            figure.ico-service
+                              img(src="images/arquitectura_oficinas.svg")
+                              figcaption OFICINAS
+                          .col-6.offset-1
                             .d-table
                               .d-table-cell
                                 .desc-service
                                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    .col-12.col-md-4
+                    .col-12.col-md-5
                       .box-service-opened-content
                         .row.no-gutters
-                          .col-3
-                            .d-table
-                              .d-table-cell
-                                figure
-                                  img(src="images/arquitectura_retail.svg")
-                          .col-7.offset-2.offset-md-1
+                          .col-2.col-md-3.offset-1.offset-md-1
+                            figure.ico-service
+                              img(src="images/arquitectura_retail.svg")
+                              figcaption RETAIL
+                          .col-6.offset-1
                             .d-table
                               .d-table-cell
                                 .desc-service
@@ -95,29 +93,27 @@ html(lang='es')
                               p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               .box-service-opened.fade
                 .box-service-opened-wrap
-                  .row.no-gutters.justify-content-center
-                    .col-12.col-md-4
+                  .row.no-gutters.justify-content-center.align-items-center
+                    .col-12.col-md-5
                       .box-service-opened-content
                         .row.no-gutters
-                          .col-3
-                            .d-table
-                              .d-table-cell
-                                figure
-                                  img(src="images/construccion_construccion.svg")
-                          .col-7.offset-2.offset-md-1
+                          .col-2.col-md-3.offset-1.offset-md-1
+                            figure.ico-service
+                              img(src="images/construccion_construccion.svg")
+                              figcaption CONSTRUCCIÓN
+                          .col-6.offset-1
                             .d-table
                               .d-table-cell
                                 .desc-service
                                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    .col-12.col-md-4
+                    .col-12.col-md-5
                       .box-service-opened-content
                         .row.no-gutters
-                          .col-3
-                            .d-table
-                              .d-table-cell
-                                figure
-                                  img(src="images/construccion_implementacion.svg")
-                          .col-7.offset-2.offset-md-1
+                          .col-2.col-md-3.offset-1.offset-md-1
+                            figure.ico-service
+                              img(src="images/construccion_implementacion.svg")
+                              figcaption IMPLEMENTACIÓN
+                          .col-6.offset-1
                             .d-table
                               .d-table-cell
                                 .desc-service
@@ -136,22 +132,27 @@ html(lang='es')
         each val, index in ['conceptualización', 'distribución espacial', 'planimetria arquitectónica', 'selección de acabados', 'ingenierías de detalle', 'ejecución', 'implementación de mobiliano', 'planificación', 'control de calidad', 'cierre']
             +process(val, index)
 
-      #services-process
-          mixin process-content(val, index)
-            .single-process
-              .row
-                .col-12.col-lg-3.col-xl-2
-                  figure.single-process-img
-                    - img="images/process/proceso" + (index + 1) + ".svg"
-                    img(src=img)
-                .col-12.col-lg-6.col-xl-7
-                  .d-table
-                    .d-table-cell
-                      .single-process-content
-                        h3=val
-                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          each val, index in ['conceptualización', 'distribución espacial', 'planimetria arquitectónica', 'selección de acabados', 'ingenierías de detalle', 'ejecución', 'implementación de mobiliano', 'planificación', 'control de calidad', 'cierre']
-              +process-content(val, index)
+      .wrap-process-carousel
+        #services-process
+            mixin process-content(val, index)
+              .single-process
+                .row
+                  .col-12.col-lg-3.col-xl-2
+                    figure.single-process-img
+                      - img="images/process/proceso" + (index + 1) + ".svg"
+                      img(src=img)
+                  .col-12.col-lg-6.col-xl-7
+                    .d-table
+                      .d-table-cell
+                        .single-process-content
+                          h3=val
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            each val, index in ['conceptualización', 'distribución espacial', 'planimetria arquitectónica', 'selección de acabados', 'ingenierías de detalle', 'ejecución', 'implementación de mobiliano', 'planificación', 'control de calidad', 'cierre']
+                +process-content(val, index)
+          
+        .process-bottom
+          h5 PROCESO
+
     .wrap-process-nav.d-block.d-lg-none
       .boxes-plans
         #plans-accordion(role='tablist')
