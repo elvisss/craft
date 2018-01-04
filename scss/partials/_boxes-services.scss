@@ -137,7 +137,7 @@
       }
     }
     .box-service-wrap {
-      max-width: 430px;
+      max-width: 450px;
       margin: 0 auto;
       text-align: center;
       position: relative;
@@ -156,6 +156,12 @@
         @include media-breakpoint-up(md) {
           cursor: pointer;
           padding: 0;
+          &.left-space {
+            @include transform(translateX(45px));
+          }
+          &.right-space {
+            @include transform(translateX(-45px));
+          }
         }
       }
     }
