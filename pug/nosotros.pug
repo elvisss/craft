@@ -32,40 +32,24 @@ html(lang='es')
                                         .box-floating-content
                                             p Desarrollamos nuestros proyectos siempre pensando en potenciar la experiencia de los clientes frente a la marca.
 
+                        h3.d-none.d-lg-block NUESTRO EQUIPO
+
         #team-about
             .panel-team.d-none.d-lg-block
                 .wrap-boxes-team
-                    h3 NUESTRO EQUIPO
-                    .main-boxes-team
-                        - var team1 = [{"name": "Carmen Jimenez", "rol": "Arquitecta", "color": ""},{"name": "Jorge Perez", "rol": "Ingeniero", "color": "gray-1"},{"name": "Juan Soto", "rol": "Musico", "color": ""}]
+                    .content-boxes-team
+                        .main-boxes-team
+                            - var team1 = [{"name": "Carmen Jimenez", "rol": "Arquitecta", "color": ""},{"name": "Jorge Perez", "rol": "Ingeniero", "color": "gray-1"},{"name": "Juan Soto", "rol": "Musico", "color": ""}]
 
-                        - var team2 = [{"name": "Carmen Jimenez", "rol": "Arquitecta", "color": "gray-2"},{"name": "Jorge Perez", "rol": "Ingeniero", "color": ""},{"name": "Juan Soto", "rol": "Musico", "color": "gray-1"},{"name": "Juan Lora", "rol": "Cantante", "color": ""},{"name": "Maria Torres", "rol": "Musico", "color": ""}]
+                            - var team2 = [{"name": "Carmen Jimenez", "rol": "Arquitecta", "color": "gray-2"},{"name": "Jorge Perez", "rol": "Ingeniero", "color": ""},{"name": "Juan Soto", "rol": "Musico", "color": "gray-1"},{"name": "Juan Lora", "rol": "Cantante", "color": ""},{"name": "Maria Torres", "rol": "Musico", "color": ""}]
 
-                        - var team3 = [{"name": "Carmen Jimenez", "rol": "Arquitecta", "color": ""},{"name": "Jorge Perez", "rol": "Ingeniero", "color": "gray-2"},{"name": "Juan Lora", "rol": "Cantante", "color": "gray-2"},{"name": "Maria Torres", "rol": "Musico", "color": ""}]
+                            - var team3 = [{"name": "Carmen Jimenez", "rol": "Arquitecta", "color": ""},{"name": "Jorge Perez", "rol": "Ingeniero", "color": "gray-2"},{"name": "Juan Lora", "rol": "Cantante", "color": "gray-2"},{"name": "Maria Torres", "rol": "Musico", "color": ""}]
 
-                        - var team4 = [{"name": "Carmen Jimenez", "rol": "Arquitecta", "color": "gray-2"},{"name": "Jorge Perez", "rol": "Ingeniero", "color": ""}]
+                            - var team4 = [{"name": "Carmen Jimenez", "rol": "Arquitecta", "color": "gray-2"},{"name": "Jorge Perez", "rol": "Ingeniero", "color": ""}]
 
-                        - var team5 = [{"name": "Carmen Jimenez", "rol": "Arquitecta", "color": "gray-2"}]
+                            - var team5 = [{"name": "Carmen Jimenez", "rol": "Arquitecta", "color": "gray-2"}]
 
-                        mixin hexagon(val, index)
-                            .box-team(class=val.color, class="box-team-animation-" + (index + 1))
-                                .single-panel
-                                    .box-team-name=val.name
-                                    .box-team-rol=val.rol
-                                .media-container
-                                    .media-content
-                                        .media(style='background-image: url("http://www.studiogusto.com/en/wp-content/uploads/sites/2/2013/10/peter.jpg")')
-
-                        .boxes-team.clearfix
-                            .box-team
-                            each val, index in team1
-                                +hexagon(val, index)
-                            .box-team.gray-1
-                        .boxes-team.clearfix
-                            each val, index in team2
-                                +hexagon(val, index)
-                        .boxes-team.clearfix
-                            each val, index in team3
+                            mixin hexagon(val, index)
                                 .box-team(class=val.color, class="box-team-animation-" + (index + 1))
                                     .single-panel
                                         .box-team-name=val.name
@@ -73,21 +57,39 @@ html(lang='es')
                                     .media-container
                                         .media-content
                                             .media(style='background-image: url("http://www.studiogusto.com/en/wp-content/uploads/sites/2/2013/10/peter.jpg")')
-                                if index == 1
-                                    .box-team.gray-3
-                        .boxes-team.clearfix
-                            each val, index in team4
-                                +hexagon(val, index)
-                            .box-team.gray-3
-                        .boxes-team.clearfix
-                            each val, index in team5
-                                .box-team.box-team-last(class=val.color, class="box-team-animation-" + (index + 1))
-                                    .single-panel
-                                        .box-team-name=val.name
-                                        .box-team-rol=val.rol
-                                    .media-container
-                                        .media-content
-                                            .media(style='background-image: url("http://www.studiogusto.com/en/wp-content/uploads/sites/2/2013/10/peter.jpg")')
+
+                            .boxes-team.clearfix
+                                .box-team
+                                each val, index in team1
+                                    +hexagon(val, index)
+                                .box-team.gray-1
+                            .boxes-team.clearfix
+                                each val, index in team2
+                                    +hexagon(val, index)
+                            .boxes-team.clearfix
+                                each val, index in team3
+                                    .box-team(class=val.color, class="box-team-animation-" + (index + 1))
+                                        .single-panel
+                                            .box-team-name=val.name
+                                            .box-team-rol=val.rol
+                                        .media-container
+                                            .media-content
+                                                .media(style='background-image: url("http://www.studiogusto.com/en/wp-content/uploads/sites/2/2013/10/peter.jpg")')
+                                    if index == 1
+                                        .box-team.gray-3
+                            .boxes-team.clearfix
+                                each val, index in team4
+                                    +hexagon(val, index)
+                                .box-team.gray-3
+                            .boxes-team.clearfix
+                                each val, index in team5
+                                    .box-team.box-team-last(class=val.color, class="box-team-animation-" + (index + 1))
+                                        .single-panel
+                                            .box-team-name=val.name
+                                            .box-team-rol=val.rol
+                                        .media-container
+                                            .media-content
+                                                .media(style='background-image: url("http://www.studiogusto.com/en/wp-content/uploads/sites/2/2013/10/peter.jpg")')
 
             .accordion-team.d-block.d-lg-none
                 h3 NUESTRO EQUIPO

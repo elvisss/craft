@@ -6,15 +6,14 @@ $panel-gray3: #EAEBED;
 .panel-team {
 	position: relative;
 	.wrap-boxes-team {
-		width: 1210px;
+		width: 1320px;
 		margin: 0 auto;
-	}
-	h3 {
-		padding-left: 55px;
-		font-family: $font-family-bold;
+		.content-boxes-team {
+			@include transform(translateX(110px));
+		}
 	}
 	.main-boxes-team {
-		padding: 50px 0;
+		padding: 32px 0 55px;
 	}
 	.boxes-team {
 		.box-team {
@@ -23,7 +22,7 @@ $panel-gray3: #EAEBED;
 			height: 127.02px;
 			background-color: #ffffff;
 			margin: 31px 0;
-			border-right: solid 1px $panel-gray;
+			border-right: solid 2px $panel-gray;
 			float: left;
 			@include transition(.5s);
 			&:before, &:after {
@@ -38,16 +37,16 @@ $panel-gray3: #EAEBED;
 			}
 			&:before {
 				top: -77.7817px;
-				border-top: solid 1.4142px $panel-gray;
-				border-right: solid 1.4142px $panel-gray;
+				border-top: solid 2.8284px $panel-gray;
+				border-right: solid 2.8284px $panel-gray;
 			}
 			&:after {
 				bottom: -77.7817px;
-				border-bottom: solid 1.4142px $panel-gray;
-				border-left: solid 1.4142px $panel-gray;
+				border-bottom: solid 2.8284px $panel-gray;
+				border-left: solid 2.8284px $panel-gray;
 			}
 			&:first-child {
-				border-left: solid 1px $panel-gray;
+				border-left: solid 2px $panel-gray;
 			}
 			&.gray-1 {
 				background-color: $panel-gray1;
