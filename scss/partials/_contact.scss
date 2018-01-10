@@ -47,27 +47,6 @@
       margin: 0 auto;
       img {
         display: block;
-        margin: 0 auto;
-      }
-      .contact-address {
-        img {
-          width: 22px;
-        }
-      }
-      .contact-phone {
-        img {
-          width: 30px;
-        }
-      }
-      .contact-email {
-        img {
-          width: 40px;
-        }
-      }
-      .contact-web {
-        img {
-          width: 30px;
-        }
       }
       .single-contact {
         margin-bottom: 25px;
@@ -79,6 +58,38 @@
         a {
           &:hover {
             text-decoration: underline;
+          }
+        }
+        &.contact-address {
+          img {
+            width: 28px;
+          }
+          .contact-body {
+            padding-left: 0;
+          }
+        }
+        &.contact-phone {
+          img {
+            width: 36px;
+          }
+          .contact-body {
+            padding-left: 5px;
+          }
+        }
+        &.contact-email {
+          img {
+            width: 48px;
+          }
+          .contact-body {
+            padding-left: 12px;
+          }
+        }
+        &.contact-web {
+          img {
+            width: 37px;
+          }
+          .contact-body {
+            padding-left: 6px;
           }
         }
       }

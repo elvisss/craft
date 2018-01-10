@@ -179,7 +179,6 @@
         @include transform(translateY(-50%));
       }
       .box-service-opened-wrap {
-        width: 430px;
         margin: 0 auto;
         text-align: center;
         position: relative;
@@ -187,16 +186,21 @@
         figure {
           margin: 0;
           &.ico-service {
+            img {
+              max-height: 65px;
+              @include media-breakpoint-up(md) {
+                max-height: 130px;
+              }
+            }
             figcaption {
-              display: none;
               font-family: $font-family-bold;
               margin-top: 8px;
-              font-size: 15px;
+              font-size: 10px;
+              @include media-breakpoint-up(md) {
+                font-size: 20px;
+              }
             }
           }
-        }
-        @include media-breakpoint-up(md) {
-          width: auto; 
         }
         .desc-service {
           p {

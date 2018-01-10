@@ -4,7 +4,9 @@ var mainSwiper = new Swiper('#main-slider', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  // autoplay: 3000,
+  autoplay: {
+    delay: 3000
+},
   autoplayDisableOnInteraction: false,
   loop: true
 });
@@ -14,7 +16,9 @@ var brandsSwiper = new Swiper('#brands-slider', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  // autoplay: 3000,
+  autoplay: {
+    delay: 3000
+},
   autoplayDisableOnInteraction: false,
   loop: true,
   slidesPerView: 5,
@@ -34,8 +38,10 @@ var comunnitySwiper = new Swiper('#comunnity-slider', {
     el: '.swiper-pagination',
     clickable: true
   },
-  slidesPerView: 1
-  // autoplay: 3000,
+  slidesPerView: 1,
+    autoplay: {
+      delay: 3000
+  }
   // autoplayDisableOnInteraction: false,
   // loop: true
 });
