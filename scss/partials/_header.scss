@@ -26,6 +26,11 @@
           padding-right: 90px;
         }
       }
+      &.navbar-shadow {
+        a {
+          text-shadow: -2px 2px 6px rgba(black, .4);
+        }
+      }
     }
     .menu-logo {
       position: absolute;
