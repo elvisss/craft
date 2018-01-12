@@ -17,12 +17,12 @@
     padding: 60px 0;
     cursor: pointer;
     outline: none;
-    &:first-child {
+    &.box-nav-top-first {
       &:after {
         left: 50%;
       }
     }
-    &:last-child {
+    &.box-nav-top-last {
       &:after {
         right: 50%;
       }
