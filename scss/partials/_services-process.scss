@@ -1,17 +1,17 @@
 #services-process {
-  padding-bottom: 110px;
+  padding-left: 65px;
   .single-process {
     outline: none;
     .single-process-img {
-      width: 205px;
-      height: 205px;
+      width: 165px;
+      height: 165px;
       background-color: $c-medium-dark;
       border-radius: 50%;
       position: relative;
       margin: 0;
       img {
         @include transform(translate(-50%, -50%));
-        width: 85px;
+        width: 80px;
         display: block;
         margin: 0 auto;
         position: absolute;
@@ -40,6 +40,7 @@
 
 .wrap-process-carousel {
   position: relative;
+  padding-bottom: 100px;
   .process-bottom {
     position: absolute;
     right: 0;

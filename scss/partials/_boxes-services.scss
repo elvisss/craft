@@ -250,6 +250,7 @@
     .desc-service {
       text-align: left;
       line-height: 1.1;
+      font-family: $font-family-light;
       p, h4 {
         font-size: 12px;
       }
@@ -273,19 +274,19 @@
   &.with-arrow {
     @include media-breakpoint-up(md) {
       position: relative;
-      margin-bottom: 145px;
+      margin-bottom: 170px;
       &:after {
         content: "";
         position: absolute;
         left: 50%;
-        bottom: -145px;
-        margin-left: -545px;
+        bottom: -100px;
+        margin-left: -475px;
         width: 0;
         height: 0;
         border: 0 solid transparent;
-        border-left-width: 245px;
-        border-right-width: 245px;
-        border-top: 145px solid rgba($c-green-medium, .5);
+        border-left-width: 180px;
+        border-right-width: 180px;
+        border-top: 100px solid rgba($c-green-medium, .5);
       }
     }
   }
