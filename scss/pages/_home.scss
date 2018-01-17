@@ -1,3 +1,5 @@
+$test-green: #3befe9;
+
 #main-slider {
     height: auto;
     @include media-breakpoint-up(md) {
@@ -99,9 +101,8 @@
       border: 0 solid transparent;
       border-left-width: 270px;
       border-right-width: 270px;
-      border-top: 160px solid $c-green;
+      border-top: 160px solid rgba($test-green, 0.4);
       z-index: 2;
-      opacity: .3;
       @include media-breakpoint-up(lg) {
         left: -90px;
       }

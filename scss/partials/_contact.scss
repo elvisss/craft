@@ -47,6 +47,8 @@
       margin: 0 auto;
       img {
         display: block;
+        width: 38px;
+        margin: 0 auto;
       }
       .single-contact {
         margin-bottom: 25px;
@@ -60,38 +62,41 @@
             text-decoration: underline;
           }
         }
-        &.contact-address {
-          img {
-            width: 28px;
-          }
-          .contact-body {
-            padding-left: 0;
-          }
+        .contact-body {
+          padding-left: 20px;
         }
-        &.contact-phone {
-          img {
-            width: 36px;
-          }
-          .contact-body {
-            padding-left: 5px;
-          }
-        }
-        &.contact-email {
-          img {
-            width: 48px;
-          }
-          .contact-body {
-            padding-left: 12px;
-          }
-        }
-        &.contact-web {
-          img {
-            width: 37px;
-          }
-          .contact-body {
-            padding-left: 6px;
-          }
-        }
+        // &.contact-address {
+        //   img {
+        //     width: 28px;
+        //   }
+        //   .contact-body {
+        //     padding-left: 0;
+        //   }
+        // }
+        // &.contact-phone {
+        //   img {
+        //     width: 36px;
+        //   }
+        //   .contact-body {
+        //     padding-left: 5px;
+        //   }
+        // }
+        // &.contact-email {
+        //   img {
+        //     width: 48px;
+        //   }
+        //   .contact-body {
+        //     padding-left: 12px;
+        //   }
+        // }
+        // &.contact-web {
+        //   img {
+        //     width: 37px;
+        //   }
+        //   .contact-body {
+        //     padding-left: 6px;
+        //   }
+        // }
       }
       .buttons-contact {
         margin-top: 65px;
