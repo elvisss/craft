@@ -20,7 +20,7 @@
     text-align: center;
     img {
       @include media-breakpoint-down(lg) {
-        @include transform(scale(.5));
+        @include transform(scale(.6));
       }
       max-width: 100%;
       max-height: 100px;

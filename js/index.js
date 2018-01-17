@@ -23,11 +23,11 @@ var brandsSwiper = new Swiper('#brands-slider', {
   loop: true,
   slidesPerView: 5,
   // spaceBetween: 40,
-  centeredSlides: true,
+  // centeredSlides: true,
   breakpoints: {
     // when window width is <= 768px
     768: {
-      slidesPerView: 3
+      slidesPerView: 2
       // spaceBetween: 30
     }
   }

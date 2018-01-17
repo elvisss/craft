@@ -271,25 +271,6 @@
       }
     }
   }
-  &.with-arrow {
-    @include media-breakpoint-up(md) {
-      position: relative;
-      margin-bottom: 170px;
-      &:after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: -100px;
-        margin-left: -475px;
-        width: 0;
-        height: 0;
-        border: 0 solid transparent;
-        border-left-width: 180px;
-        border-right-width: 180px;
-        border-top: 100px solid rgba($c-green-medium, .5);
-      }
-    }
-  }
   .view-more {
     position: absolute;
     top: 0;

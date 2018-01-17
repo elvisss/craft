@@ -1,0 +1,20 @@
+.with-arrow {
+  max-width: 1300px;
+  margin: 0 auto;
+  @include media-breakpoint-up(md) {
+    position: relative;
+    height: 170px;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 65px;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-left-width: 180px;
+      border-right-width: 180px;
+      border-top: 100px solid rgba($c-green-medium, .5);
+    }
+  }
+  }
