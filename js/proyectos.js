@@ -1,7 +1,6 @@
 var portfolioSwiper = "";
 
 $('body').on('shown.bs.modal', '.modal-portfolio', function() {
-  // portfolioSwiper.update();
 
   if (portfolioSwiper == "") {
     portfolioSwiper = new Swiper('.portfolio-slider', {
