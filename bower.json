@@ -18,6 +18,7 @@
     "bootstrap": "v4.0.0-beta",
     "bourbon": "^4.3.4",
     "swiper": "^4.0.7",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "shufflejs": "^5.0.3"
   }
 }

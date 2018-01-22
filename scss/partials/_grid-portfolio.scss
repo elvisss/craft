@@ -1,0 +1,98 @@
+#grid-portfolio {
+  margin: 0 auto;
+  overflow: visible !important;
+  @include media-breakpoint-up(md) {
+    max-width: 504px;
+  }
+  .box-portfolio {
+    min-width: 30px;
+    padding: 6px;
+    &:hover {
+      z-index: 5;
+    }
+    .box-content {
+      @include media-breakpoint-up(md) {
+        @include transform(rotate(180deg));
+      }
+    }
+    .box-images {
+      margin: 0;
+      position: relative;
+      cursor: pointer;
+      float: left;
+      width: 40px;
+      height: 40px;
+      @include media-breakpoint-up(md) {
+        float: none;
+        width: 30px;
+        height: 30px;
+      }
+      @include transition(all .25s ease-in-out);
+      .box-img {
+        background-color: black;
+        @include transition(opacity .5s ease-in-out)
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        &.bottom {
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: top center;
+        }
+        &.top {
+          img {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            left: 50%;
+            margin-left: -10px;
+          }
+        }
+        &.bc-black {
+          background-color: black;
+        }
+        &.bc-dark {
+          background-color: $c-dark-regular;
+        }
+        &.bc-gray {
+          background-color: $c-gray-regular;
+        }
+        &.bc-white {
+          background-color: $c-gray-light;
+        }
+      }
+      @include media-breakpoint-up(md) {
+        &:hover {
+          @include transform(scale(2.5));
+          .box-img {
+            &.top {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+    .box-description {
+      margin-left: 10px;
+      float: left;
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+      .box-client {
+        line-height: 20px;
+      }
+      .box-project {
+        line-height: 20px;
+      }
+    }
+  }
+  .my-sizer-element {
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,92 @@
+#portfolio {
+  position: relative;
+  padding-top: 220px;
+  padding-bottom: 0;
+  @include media-breakpoint-up(md) {
+    padding-top: 0;
+    padding-bottom: 100px;
+  }
+  .grid-projects {
+    overflow: hidden;
+    position: relative;
+    padding: 20px 34px;
+    @include media-breakpoint-up(md) {
+      @include transform(rotate(180deg));
+      padding: 40px 0;
+      height: 450px;
+    }
+  }
+  .actions-projects {
+    height: 220px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 1px solid $c-gray-light;
+    @include media-breakpoint-up(md) {
+      border-bottom: medium none;
+      height: auto;
+      position: relative;
+    }
+    .filter-projects {
+      text-align: center;
+      a {
+        color: $c-black;
+        font-size: 14px;
+        font-family: $font-family-bold;
+        padding: 10px 20px;
+        background-color: $c-gray-light;
+        width: 50%;
+        float: left;
+        &.active {
+          background-color: white;
+        }
+        @include media-breakpoint-up(md) {
+          float: none;
+          width: auto;
+          background-color: transparent;
+          &:hover, &.active {
+            color: $c-green-regular;
+          }
+        }
+      }
+    }
+    .sort-projects {
+      padding: 20px;
+      @include media-breakpoint-up(md) {
+        padding: 0;
+        text-align: center;
+      }
+      .sort-option {
+        display: block;
+        padding: 2px 0;
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+        }
+        &:hover, &.active {
+          label {
+            color: $c-green-regular;
+          }
+        }
+      }
+      label {
+        display: inline-block;
+        color: $c-gray;
+        font-size: 15px;
+        font-family: $font-family-roman;
+        padding: 0 20px;
+        cursor: pointer;
+        margin: 0;
+        input[type="radio"] {
+          clip: rect(0,0,0,0);
+          pointer-events: none;
+          position: absolute;
+        }
+        @include media-breakpoint-up(md) {
+          font-size: 12px;
+          font-family: $font-family-bold;
+        }
+      }
+    }
+  }
+}

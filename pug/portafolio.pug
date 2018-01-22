@@ -1,0 +1,135 @@
+doctype html
+html(lang='es')
+  include includes/head.pug
+  body
+    include includes/header.pug
+
+    .content-page
+      #portfolio
+        .grid-projects
+          #grid-portfolio.row.no-gutters.my-shuffle-container
+
+            include includes/projects.pug
+
+            mixin project(val, index)
+              .box-portfolio.col-12.col-md-1.picture-item(data-groups='["' + val.groups + '"]', data-date-created='2017-04-30', data-client=val.client, data-status=val.status, data-area=val.area, data-services=val.services)
+                .box-content(data-target=".modal-portfolio", data-toggle="modal")
+                  .box-images
+                    .box-img.bottom(style="background-image: url('" + val.thumbnail + "')")
+                    .box-img.top(data-toggle="tooltip", data-placement="right", title=val.client)
+                      img(src=val.logo)
+                  .box-description
+                    .box-client=val.client
+                    .box-project projecto
+
+            each val, index in projects
+              +project(val, index)
+
+            .my-sizer-element.col-1
+
+        .actions-projects
+          .filter-projects
+            .filter-options.clearfix
+              a(href="javascript:void(0)", data-group='architecture') ARQUITECTURA
+              a(href="javascript:void(0)", data-group='construction') CONSTRUCCIÓN
+              a.d-none.d-md-inline-block(href="javascript:void(0)", data-group='all') MOSTRAR TODOS
+          .sort-projects
+            .sort-options
+              .sort-option
+                label
+                  input(type='radio', name='sort-value', value='date-created')
+                  | CRONOLÓGICO
+              .sort-option
+                label
+                  input(type='radio', name='sort-value', value='client')
+                  | CLIENTE
+              .sort-option
+                label
+                  input(type='radio', name='sort-value', value='services')
+                  | SERVICIO
+              .sort-option
+                label
+                  input(type='radio', name='sort-value', value='area')
+                  | ÁREA
+              .sort-option
+                label
+                  input(type='radio', name='sort-value', value='status')
+                  | ESTADO
+
+    .modal.fade.modal-portfolio(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-dialog.modal-lg.modal-xl
+        .modal-content
+          .modal-body
+            button.close(type="button", data-dismiss="modal", aria-label="Close")
+              span(aria-hidden="true") &times;
+            .wrap-portfolio
+              .portfolio-slider.swiper-container
+                .swiper-wrapper
+                  .swiper-slide
+                    figure.portfolio-banner-bg(style="background-image: url(./images/portfolio/slide1.jpg)")
+                      img(src="./images/portfolio/slide1.jpg").d-md-none
+                  .swiper-slide
+                    figure.portfolio-banner-bg(style="background-image: url(./images/portfolio/slide1.jpg)")
+                      img(src="./images/portfolio/slide1.jpg").d-md-none
+                  .swiper-slide
+                    figure.portfolio-banner-bg(style="background-image: url(./images/portfolio/slide1.jpg)")
+                      img(src="./images/portfolio/slide1.jpg").d-md-none
+                  .swiper-slide
+                    figure.portfolio-banner-bg(style="background-image: url(./images/portfolio/slide1.jpg)")
+                      img(src="./images/portfolio/slide1.jpg").d-md-none
+                .swiper-pagination
+
+              .project-top
+                .project-logo
+                  img(src="./images/portfolio/project-logo.png")
+                .project-summary
+                  .project-title PASQUALE
+                  .project-review Lorem ipsum sit
+
+              .portfolio-description
+                .project-container
+                  .project-content
+                    .project-wrap
+                      .project-boxes
+                        .project-box
+                          h4 SERVICIO
+                            .project-box-desc Diseño, Desarrollo y ejecución
+                        .project-box
+                          h4 ÁREA
+                            .project-box-desc 800 M<sup>2</sup>
+
+                      ul.project-services.clearfix
+                        li.project-service.active
+                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          .project-service-text Conceptualización
+                        li.project-service.active
+                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          .project-service-text Distribución Espacial
+                        li.project-service.active
+                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          .project-service-text Ingenierias de detalle
+                        li.project-service
+                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          .project-service-text Planimetría arquitectónica
+                        li.project-service
+                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          .project-service-text Selección de Acabados
+                        li.project-service
+                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          .project-service-text Planificación
+                        li.project-service
+                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          .project-service-text Construcción
+                        li.project-service
+                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          .project-service-text Control de Calidad
+                        li.project-service
+                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          .project-service-text Cierre
+                  .project-toggle.d-none.d-md-block
+                    a.summary-toggle(href="#")
+
+
+    include includes/footer.pug
+    script(src="bower_components/shufflejs/dist/shuffle.js")
+    script(src="js/proyectos.js",type="text/javascript")

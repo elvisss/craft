@@ -1,0 +1,208 @@
+.wrap-portfolio {
+  @include media-breakpoint-up(md) {
+    height: 700px;
+  }
+  .portfolio-description {
+    @include transition(opacity .5s ease-in-out);
+    background-color: $c-gray-medium;
+    position: relative;
+    opacity: 1;
+    z-index: 2;
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      left: 0;
+      width: 300px;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(black, .9);
+    }
+    .project-container {
+      height: 100%;
+      position: relative;
+    }
+    .project-content {
+      padding: 25px 15px 45px;
+      @include media-breakpoint-up(md) {
+        padding: 35px;
+      }
+      .project-wrap {
+        @include media-breakpoint-up(md) {
+          padding-top: 105px;
+        }
+        .project-boxes {
+          .project-box {
+            padding-left: 20px;
+            background-image: url('../images/portfolio/bullet-negative.png');
+            background-repeat: no-repeat;
+            background-position: 4px 4px;
+            margin-top: 15px;
+            @include media-breakpoint-up(md) {
+              background-image: url('../images/portfolio/bullet.png');
+            }
+            &:first-child {
+              margin-top: 0;
+            }
+            h4 {
+              color: $c-black;;
+              font-size: 14px;
+              @include media-breakpoint-up(md) {
+                color: white;
+              }
+              .project-box-desc {
+                display: inline-block;
+                font-family: $font-family-bold;
+                margin-left: 5px;
+                @include media-breakpoint-up(md) {
+                  display: block;
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+        .project-services {
+          margin-top: 15px;
+          padding-left: 20px;
+          @include media-breakpoint-up(md) {
+            margin-top: 35px;
+            padding-left: 0;
+          }
+          .project-service {
+            @include media-breakpoint-up(md) {
+              width: 35%;
+              float: left;
+              opacity: .3;
+              margin-bottom: 18px;
+            }
+            &:before {
+              content: '✓';
+            }
+            &.active {
+              opacity: 1;
+            }
+            .project-service-text {
+              display: inline-block;
+              margin-left: 5px;
+              @include media-breakpoint-up(md) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.hide-description {
+      opacity: 0;
+    }
+  }
+  .project-top {
+    background-color: black;
+    padding: 8px 8px 8px 12px;
+    @include media-breakpoint-up(md) {
+      background-color: transparent;
+      position: absolute;
+      padding: 0;
+      left: 35px;
+      top: 35px;
+      width: 230px;
+      cursor: pointer;
+      z-index: 5;
+    }
+    .project-logo {
+      float: left;
+      img {
+        width: 40px;
+        height: 40px;
+        @include media-breakpoint-up(md) {
+          width: 75px;
+          height: 75px;
+        }
+      }
+    }
+    .project-summary {
+      margin-left: 55px;
+      padding: 9px 0;
+      @include media-breakpoint-up(md) {
+        margin-left: 90px;
+        padding: 16px 0;
+      }
+      .project-title {
+        display: inline-block;
+        line-height: 20px;
+        color: white;
+        font-size: 14px;
+        font-family: $font-family-bold;
+        @include media-breakpoint-up(md) {
+          display: block;
+        }
+      }
+      .project-review {
+        display: inline-block;
+        line-height: 20px;
+        font-size: 14px;
+        color: white;
+        @include media-breakpoint-up(md) {
+          display: block;
+        }
+      }
+    }
+  }
+  .project-toggle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    a {
+      display: block;
+      margin: 0 auto;
+      width: 34px;
+      height: 30px;
+      background-image: url('../images/portfolio/arrow-top.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.modal-portfolio {
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    opacity: 1;
+    font-weight: lighter;
+    z-index: 20;
+  }
+  .modal-body {
+    padding: 0;
+  }
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      width: 16px;
+      height: 16px;
+      background-color: $c-bullet-green;
+    }
+  }
+}
+
+.portfolio-slider {
+  height: auto;
+  @include media-breakpoint-up(md) {
+      height: 100%;
+  }
+  .portfolio-banner-bg {
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+    @include media-breakpoint-down(sm) {
+        background-image: none !important;
+    }
+    img {
+        width: 100%;
+    }
+  }
+}
