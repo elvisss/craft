@@ -44,222 +44,209 @@ $(function(){
 var Shuffle = window.Shuffle;
 
 var Demo = function (element) {
-  this.element = element;
+  this.categories = Array.from(document.querySelectorAll('.js-categories button'));
+  this.services = Array.from(document.querySelectorAll('.js-service li'));
+  this.areas = Array.from(document.querySelectorAll('.js-areas li'));
 
   this.shuffle = new Shuffle(element, {
-    itemSelector: '.picture-item',
-    sizer: element.querySelector('.my-sizer-element'),
+    easing: 'cubic-bezier(0.165, 0.840, 0.440, 1.000)', // easeOutQuart
+    sizer: '.the-sizer',
   });
 
-  // Log events.
-  this.addShuffleEventListeners();
+  this.filters = {
+    categories: [],
+    services: [],
+    areas: []
+  };
 
-  this._activeFilters = [];
-
-  this.addFilterButtons();
-  this.addSorting();
-  this.addSearchFilter();
-
-  this.mode = 'exclusive';
-};
-
-Demo.prototype.toggleMode = function () {
-  if (this.mode === 'additive') {
-    this.mode = 'exclusive';
-  } else {
-    this.mode = 'additive';
-  }
+  this._bindEventListeners();
 };
 
 /**
- * Shuffle uses the CustomEvent constructor to dispatch events. You can listen
- * for them like you normally would (with jQuery for example).
+ * Bind event listeners for when the filters change.
  */
-Demo.prototype.addShuffleEventListeners = function () {
-  this.shuffle.on(Shuffle.EventType.LAYOUT, function (data) {
-    // console.log('layout. data:', data);
-  });
+Demo.prototype._bindEventListeners = function () {
+  this._onCategoryChange = this._handleCategoryChange.bind(this);
+  this._onServiceChange = this._handleServiceChange.bind(this);
+  this._onAreaChange = this._handleAreaChange.bind(this);
 
-  this.shuffle.on(Shuffle.EventType.REMOVED, function (data) {
-    // console.log('removed. data:', data);
-  });
-};
+  this.categories.forEach(function (button) {
+    button.addEventListener('click', this._onCategoryChange);
+  }, this);
 
-Demo.prototype.addFilterButtons = function () {
-  var options = document.querySelector('.filter-options');
+  this.services.forEach(function (li) {
+    li.addEventListener('click', this._onServiceChange);
+  }, this);
 
-  if (!options) {
-    return;
-  }
-
-  var filterButtons = Array.from(options.children);
-
-  filterButtons.forEach(function (button) {
-    button.addEventListener('click', this._handleFilterClick.bind(this), false);
+  this.areas.forEach(function (li) {
+    li.addEventListener('click', this._onAreaChange);
   }, this);
 };
 
-Demo.prototype._handleFilterClick = function (evt) {
-  var btn = evt.currentTarget;
-  var isActive = btn.classList.contains('active');
-  var btnGroup = btn.getAttribute('data-group');
-
-  // You don't need _both_ of these modes. This is only for the demo.
-
-  // For this custom 'additive' mode in the demo, clicking on filter buttons
-  // doesn't remove any other filters.
-  if (this.mode === 'additive') {
-    // If this button is already active, remove it from the list of filters.
-    if (isActive) {
-      this._activeFilters.splice(this._activeFilters.indexOf(btnGroup));
-    } else {
-      this._activeFilters.push(btnGroup);
-    }
-
-    btn.classList.toggle('active');
-
-    // Filter elements
-    this.shuffle.filter(this._activeFilters);
-
-  // 'exclusive' mode lets only one filter button be active at a time.
-  } else {
-    this._removeActiveClassFromChildren(btn.parentNode);
-
-    var filterGroup;
-    if (isActive) {
-      btn.classList.remove('active');
-      filterGroup = Shuffle.ALL_ITEMS;
-    } else {
-      btn.classList.add('active');
-      filterGroup = btnGroup;
-    }
-
-    this.shuffle.filter(filterGroup);
-  }
-};
-
-Demo.prototype._removeActiveClassFromChildren = function (parent) {
-  var children = parent.children;
-  for (var i = children.length - 1; i >= 0; i--) {
-    children[i].classList.remove('active');
-  }
-};
-
-Demo.prototype.addSorting = function () {
-  var buttonGroup = document.querySelector('.sort-options');
-
-  if (!buttonGroup) {
-    return;
-  }
-
-  buttonGroup.addEventListener('change', this._handleSortChange.bind(this));
-};
-
-Demo.prototype._handleSortChange = function (evt) {
-  // Add and remove `active` class from buttons.
-  var wrapper = evt.currentTarget;
-  var buttons = Array.from(evt.currentTarget.children);
-  buttons.forEach(function (button) {
-    if (button.querySelector('input').value === evt.target.value) {
-      button.classList.add('active');
-    } else {
-      button.classList.remove('active');
-    }
+/**
+ * Get the values of each checked input.
+ * @return {Array.<string>}
+ */
+Demo.prototype._getCurrentCategoryFilters = function () {
+  return this.categories.filter(function (button) {
+    return button.classList.contains('active');
+  }).map(function (button) {
+    return button.getAttribute('data-value');
   });
-
-  // Create the sort options to give to Shuffle.
-  var value = evt.target.value;
-  var options = {};
-
-  function sortByDate(element) {
-    return element.getAttribute('data-created');
-  }
-
-  function sortByClient(element) {
-    return element.getAttribute('data-client').toLowerCase();
-  }
-
-  function sortByStatus(element) {
-    return element.getAttribute('data-status').toLowerCase();
-  }
-
-  function sortByArea(element) {
-    return parseInt(element.getAttribute('data-area'));
-  }
-
-  function sortByServices(element) {
-    return element.getAttribute('data-services').toLowerCase();
-  }
-
-  if (value === 'date-created') {
-    options = {
-      reverse: true,
-      by: sortByDate,
-    };
-  } else if (value === 'client') {
-    options = {
-      reverse: true,
-      by: sortByClient,
-    };
-  } else if (value === 'status') {
-    options = {
-      reverse: true,
-      by: sortByStatus,
-    };
-  } else if (value === 'area') {
-    options = {
-      reverse: true,
-      by: sortByArea,
-    };
-  } else if (value === 'services') {
-    options = {
-      reverse: true,
-      by: sortByServices,
-    };
-  }
-
-  this.shuffle.sort(options);
-};
-
-// Advanced filtering
-Demo.prototype.addSearchFilter = function () {
-  var searchInput = document.querySelector('.js-shuffle-search');
-
-  if (!searchInput) {
-    return;
-  }
-
-  searchInput.addEventListener('keyup', this._handleSearchKeyup.bind(this));
 };
 
 /**
- * Filter the shuffle instance by items with a title that matches the search input.
- * @param {Event} evt Event object.
+ * Get the values of each `active` button.
+ * @return {Array.<string>}
  */
-Demo.prototype._handleSearchKeyup = function (evt) {
-  var searchText = evt.target.value.toLowerCase();
-
-  this.shuffle.filter(function (element, shuffle) {
-
-    // If there is a current filter applied, ignore elements that don't match it.
-    if (shuffle.group !== Shuffle.ALL_ITEMS) {
-      // Get the item's groups.
-      var groups = JSON.parse(element.getAttribute('data-groups'));
-      var isElementInCurrentGroup = groups.indexOf(shuffle.group) !== -1;
-
-      // Only search elements in the current group
-      if (!isElementInCurrentGroup) {
-        return false;
-      }
-    }
-
-    var titleElement = element.querySelector('.picture-item__title');
-    var titleText = titleElement.textContent.toLowerCase().trim();
-
-    return titleText.indexOf(searchText) !== -1;
+Demo.prototype._getCurrentServiceFilters = function () {
+  return this.services.filter(function (li) {
+    return li.classList.contains('active');
+  }).map(function (li) {
+    console.log(li.getAttribute('data-value'))
+    return li.getAttribute('data-value');
   });
 };
 
+/**
+ * Get the values of each `active` button.
+ * @return {Array.<string>}
+ */
+Demo.prototype._getCurrentAreaFilters = function () {
+  return this.areas.filter(function (li) {
+    return li.classList.contains('active');
+  }).map(function (li) {
+    return li.getAttribute('data-value');
+  });
+};
+
+/**
+ * A shape input check state changed, update the current filters and filte.r
+ */
+Demo.prototype._handleCategoryChange = function (evt) {
+
+  var button = evt.currentTarget;
+
+  // Treat these buttons like radio buttons where only 1 can be selected.
+  if (button.classList.contains('active')) {
+    button.classList.remove('active');
+  } else {
+    this.categories.forEach(function (btn) {
+      btn.classList.remove('active');
+    });
+
+    button.classList.add('active');
+  }
+
+  this.filters.categories = this._getCurrentCategoryFilters();
+  this.filter();
+};
+
+/**
+ * A color button was clicked. Update filters and display.
+ * @param {Event} evt Click event object.
+ */
+Demo.prototype._handleServiceChange = function (evt) {
+
+  var li = evt.currentTarget;
+
+  // console.log(li)
+
+  // Treat these buttons like radio buttons where only 1 can be selected.
+  if (li.classList.contains('active')) {
+    li.classList.remove('active');
+  } else {
+    this.services.forEach(function (li) {
+      li.classList.remove('active');
+    });
+
+    li.classList.add('active');
+  }
+
+  this.filters.services = this._getCurrentServiceFilters();
+  this.filter();
+};
+
+/**
+ * A color button was clicked. Update filters and display.
+ * @param {Event} evt Click event object.
+ */
+Demo.prototype._handleAreaChange = function (evt) {
+
+  var li = evt.currentTarget;
+
+  // console.log(li)
+
+  // Treat these buttons like radio buttons where only 1 can be selected.
+  if (li.classList.contains('active')) {
+    li.classList.remove('active');
+  } else {
+    this.areas.forEach(function (li) {
+      li.classList.remove('active');
+    });
+
+    li.classList.add('active');
+  }
+
+  this.filters.areas = this._getCurrentAreaFilters();
+  this.filter();
+};
+
+/**
+ * Filter shuffle based on the current state of filters.
+ */
+Demo.prototype.filter = function () {
+  console.log(this.filters)
+  if (this.hasActiveFilters()) {
+    this.shuffle.filter(this.itemPassesFilters.bind(this));
+  } else {
+    this.shuffle.filter(Shuffle.ALL_ITEMS);
+  }
+};
+
+/**
+ * If any of the arrays in the `filters` property have a length of more than zero,
+ * that means there is an active filter.
+ * @return {boolean}
+ */
+Demo.prototype.hasActiveFilters = function () {
+  return Object.keys(this.filters).some(function (key) {
+    return this.filters[key].length > 0;
+  }, this);
+};
+
+/**
+ * Determine whether an element passes the current filters.
+ * @param {Element} element Element to test.
+ * @return {boolean} Whether it satisfies all current filters.
+ */
+Demo.prototype.itemPassesFilters = function (element) {
+  var categories = this.filters.categories;
+  var services = this.filters.services;
+  var areas = this.filters.areas;
+  var category = element.getAttribute('data-category');
+  var service = element.getAttribute('data-service');
+  console.log(service)
+  var area = element.getAttribute('data-area');
+
+  // If there are active shape filters and this shape is not in that array.
+  if (categories.length > 0 && !categories.includes(category)) {
+    return false;
+  }
+
+  // If there are active color filters and this color is not in that array.
+  if (services.length > 0 && !services.includes(service)) {
+    return false;
+  }
+
+  // If there are active color filters and this color is not in that array.
+  if (areas.length > 0 && !areas.includes(area)) {
+    return false;
+  }
+
+  return true;
+};
+
 document.addEventListener('DOMContentLoaded', function () {
-  window.demo = new Demo(document.getElementById('grid-portfolio'));
+  window.demo = new Demo(document.querySelector('.js-shuffle'));
 });

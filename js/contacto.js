@@ -202,5 +202,5 @@ function showGoogleMaps() {
 google.maps.event.addDomListener(window, 'load', showGoogleMaps);
 
 $(function(){
-  $('.navbar-custom li:nth-child(4)').addClass('current-menu-item');
+  $('.navbar-custom li:nth-child(5)').addClass('current-menu-item');
 });
