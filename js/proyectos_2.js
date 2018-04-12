@@ -1,49 +1,49 @@
-var portfolioSwiper = "";
+// var portfolioSwiper = "";
 
-$('body').on('shown.bs.modal', '.modal-portfolio', function() {
+// $('body').on('shown.bs.modal', '.modal-portfolio', function() {
 
-  if (portfolioSwiper == "") {
-    portfolioSwiper = new Swiper('.portfolio-slider', {
-      autoplay: {
-        delay: 3000
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      autoplayDisableOnInteraction: false,
-      loop: true
-    });
-  } else {
-    portfolioSwiper.update();
-  }
+//   if (portfolioSwiper == "") {
+//     portfolioSwiper = new Swiper('.portfolio-slider', {
+//       autoplay: {
+//         delay: 3000
+//       },
+//       pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true
+//       },
+//       autoplayDisableOnInteraction: false,
+//       loop: true
+//     });
+//   } else {
+//     portfolioSwiper.update();
+//   }
 
-});
+// });
 
-$(function(){
+// $(function(){
 
-  $('.navbar-custom li:nth-child(4)').addClass('current-menu-item');
-  $('.navbar').addClass('navbar-dark');
-  $('.menu-logo').addClass('menu-inverse');
+//   $('.navbar-custom li:nth-child(4)').addClass('current-menu-item');
+//   $('.navbar').addClass('navbar-dark');
+//   $('.menu-logo').addClass('menu-inverse');
 
-  $('[data-toggle="tooltip"]').tooltip();
+//   $('[data-toggle="tooltip"]').tooltip();
 
-  $('.summary-toggle').on('click', function() {
-    $('.portfolio-description').addClass('hide-description');
-  });
+//   $('.summary-toggle').on('click', function() {
+//     $('.portfolio-description').addClass('hide-description');
+//   });
 
-  $('.project-top').on('click', function() {
-    $('.portfolio-description').removeClass('hide-description');
-  });
+//   $('.project-top').on('click', function() {
+//     $('.portfolio-description').removeClass('hide-description');
+//   });
 
-});
+// });
 
 
 'use strict';
 
 var Shuffle = window.Shuffle;
 
-var Demo = function (element) {
+var Demo2 = function (element) {
   this.element = element;
 
   this.shuffle = new Shuffle(element, {
@@ -63,7 +63,7 @@ var Demo = function (element) {
   this.mode = 'exclusive';
 };
 
-Demo.prototype.toggleMode = function () {
+Demo2.prototype.toggleMode = function () {
   if (this.mode === 'additive') {
     this.mode = 'exclusive';
   } else {
@@ -75,7 +75,7 @@ Demo.prototype.toggleMode = function () {
  * Shuffle uses the CustomEvent constructor to dispatch events. You can listen
  * for them like you normally would (with jQuery for example).
  */
-Demo.prototype.addShuffleEventListeners = function () {
+Demo2.prototype.addShuffleEventListeners = function () {
   this.shuffle.on(Shuffle.EventType.LAYOUT, function (data) {
     // console.log('layout. data:', data);
   });
@@ -85,7 +85,7 @@ Demo.prototype.addShuffleEventListeners = function () {
   });
 };
 
-Demo.prototype.addFilterButtons = function () {
+Demo2.prototype.addFilterButtons = function () {
   var options = document.querySelector('.filter-options');
 
   if (!options) {
@@ -99,7 +99,7 @@ Demo.prototype.addFilterButtons = function () {
   }, this);
 };
 
-Demo.prototype._handleFilterClick = function (evt) {
+Demo2.prototype._handleFilterClick = function (evt) {
   var btn = evt.currentTarget;
   var isActive = btn.classList.contains('active');
   var btnGroup = btn.getAttribute('data-group');
@@ -142,14 +142,14 @@ Demo.prototype._handleFilterClick = function (evt) {
   }
 };
 
-Demo.prototype._removeActiveClassFromChildren = function (parent) {
+Demo2.prototype._removeActiveClassFromChildren = function (parent) {
   var children = parent.children;
   for (var i = children.length - 1; i >= 0; i--) {
     children[i].classList.remove('active');
   }
 };
 
-Demo.prototype.addSorting = function () {
+Demo2.prototype.addSorting = function () {
   var buttonGroup = document.querySelector('.sort-options');
 
   if (!buttonGroup) {
@@ -159,7 +159,7 @@ Demo.prototype.addSorting = function () {
   buttonGroup.addEventListener('change', this._handleSortChange.bind(this));
 };
 
-Demo.prototype._handleSortChange = function (evt) {
+Demo2.prototype._handleSortChange = function (evt) {
   // Add and remove `active` class from buttons.
   var wrapper = evt.currentTarget;
   var buttons = Array.from(evt.currentTarget.children);
@@ -226,7 +226,7 @@ Demo.prototype._handleSortChange = function (evt) {
 };
 
 // Advanced filtering
-Demo.prototype.addSearchFilter = function () {
+Demo2.prototype.addSearchFilter = function () {
   var searchInput = document.querySelector('.js-shuffle-search');
 
   if (!searchInput) {
@@ -240,7 +240,7 @@ Demo.prototype.addSearchFilter = function () {
  * Filter the shuffle instance by items with a title that matches the search input.
  * @param {Event} evt Event object.
  */
-Demo.prototype._handleSearchKeyup = function (evt) {
+Demo2.prototype._handleSearchKeyup = function (evt) {
   var searchText = evt.target.value.toLowerCase();
 
   this.shuffle.filter(function (element, shuffle) {
@@ -265,5 +265,5 @@ Demo.prototype._handleSearchKeyup = function (evt) {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-  window.demo = new Demo(document.getElementById('grid-portfolio'));
+  window.demo2 = new Demo2(document.getElementById('grid-portfolio'));
 });

@@ -1,0 +1,51 @@
+.float-box
+    .float-box-content
+        figure
+            img(src="./images/cotizador_icon.svg", alt="")
+            figcaption Solicita una cotización
+
+.float-form
+    .float-form-content
+        .float-triangle
+        .float-form-wrap
+            .contact-body-form.float-body-form
+                form
+                    h2 CUÉNTANOS DE TU PROYECTO
+                    .row
+                        .col-12.col-md-6
+                            .form-group
+                                label Nombre
+                                input.form-control(type="text", placeholder="")
+                        .col-12.col-md-6
+                            .form-group
+                                  label E-mail
+                                  input.form-control(type="email", placeholder="")
+                        .col-12.col-md-6
+                            .form-group
+                                label Tipo de Proyecto
+                                select.form-control
+                                    option OFICINA
+                                    option RETAIL
+                        .col-12.col-md-6
+                            .form-group
+                                label Área del proyecto (m<sup>2</sup>)
+                                select.form-control
+                                    option MENOS DE 100
+                                    option DE 100 A 500
+                                    option DE 500 A MÁS
+                        .col-12.col-md-6
+                            .form-group
+                                label Servicio requerido
+                                select.form-control
+                                    option 1
+                                    option 2
+                        .col-12.col-md-6
+                            .form-group
+                                label Ubicación
+                                input.form-control(type="text", placeholder="")
+                        .col-12
+                            .form-group
+                                label Mensaje
+                                textarea.form-control(rows="4")
+                        .col-12
+                            button.btn.btn-block.btn-transparent(type="submit") ENVIAR

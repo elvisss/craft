@@ -4,6 +4,8 @@ html(lang='es')
   body
     include includes/header.pug
 
+    include includes/float-form.pug
+
     section.fluid-full-section
       .main-wrapper
         #googlemaps
@@ -45,7 +47,7 @@ html(lang='es')
                   button.close(type="button", data-dismiss="modal", aria-label="Close")
                     span(aria-hidden="true") &times;
                 .modal-body
-                    .modal-body-form
+                    .contact-body-form
                       form
                         h2 CUÉNTANOS DE TU PROYECTO
                         .row

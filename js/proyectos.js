@@ -47,6 +47,7 @@ var Demo = function (element) {
   this.categories = Array.from(document.querySelectorAll('.js-categories button'));
   this.services = Array.from(document.querySelectorAll('.js-service li'));
   this.areas = Array.from(document.querySelectorAll('.js-areas li'));
+  this.names = document.getElementById('js-names');
 
   this.shuffle = new Shuffle(element, {
     easing: 'cubic-bezier(0.165, 0.840, 0.440, 1.000)', // easeOutQuart
@@ -56,7 +57,8 @@ var Demo = function (element) {
   this.filters = {
     categories: [],
     services: [],
-    areas: []
+    areas: [],
+    names: []
   };
 
   this._bindEventListeners();
@@ -69,6 +71,7 @@ Demo.prototype._bindEventListeners = function () {
   this._onCategoryChange = this._handleCategoryChange.bind(this);
   this._onServiceChange = this._handleServiceChange.bind(this);
   this._onAreaChange = this._handleAreaChange.bind(this);
+  this._onNameChange = this._handleNameChange.bind(this);
 
   this.categories.forEach(function (button) {
     button.addEventListener('click', this._onCategoryChange);
@@ -81,43 +84,10 @@ Demo.prototype._bindEventListeners = function () {
   this.areas.forEach(function (li) {
     li.addEventListener('click', this._onAreaChange);
   }, this);
-};
 
-/**
- * Get the values of each checked input.
- * @return {Array.<string>}
- */
-Demo.prototype._getCurrentCategoryFilters = function () {
-  return this.categories.filter(function (button) {
-    return button.classList.contains('active');
-  }).map(function (button) {
-    return button.getAttribute('data-value');
-  });
-};
+  this.names.addEventListener('change', this._onNameChange, false);
 
-/**
- * Get the values of each `active` button.
- * @return {Array.<string>}
- */
-Demo.prototype._getCurrentServiceFilters = function () {
-  return this.services.filter(function (li) {
-    return li.classList.contains('active');
-  }).map(function (li) {
-    console.log(li.getAttribute('data-value'))
-    return li.getAttribute('data-value');
-  });
-};
 
-/**
- * Get the values of each `active` button.
- * @return {Array.<string>}
- */
-Demo.prototype._getCurrentAreaFilters = function () {
-  return this.areas.filter(function (li) {
-    return li.classList.contains('active');
-  }).map(function (li) {
-    return li.getAttribute('data-value');
-  });
 };
 
 /**
@@ -193,6 +163,52 @@ Demo.prototype._handleAreaChange = function (evt) {
 };
 
 /**
+ * A color button was clicked. Update filters and display.
+ * @param {Event} evt Click event object.
+ */
+Demo.prototype._handleNameChange = function (evt) {
+  this.filters.names = evt.target.value !== "ALL" ? [evt.target.value] : [];
+  this.filter();
+};
+
+/**
+ * Get the values of each checked input.
+ * @return {Array.<string>}
+ */
+Demo.prototype._getCurrentCategoryFilters = function () {
+  return this.categories.filter(function (button) {
+    return button.classList.contains('active');
+  }).map(function (button) {
+    return button.getAttribute('data-value');
+  });
+};
+
+/**
+ * Get the values of each `active` button.
+ * @return {Array.<string>}
+ */
+Demo.prototype._getCurrentServiceFilters = function () {
+  return this.services.filter(function (li) {
+    return li.classList.contains('active');
+  }).map(function (li) {
+    console.log(li.getAttribute('data-value'))
+    return li.getAttribute('data-value');
+  });
+};
+
+/**
+ * Get the values of each `active` button.
+ * @return {Array.<string>}
+ */
+Demo.prototype._getCurrentAreaFilters = function () {
+  return this.areas.filter(function (li) {
+    return li.classList.contains('active');
+  }).map(function (li) {
+    return li.getAttribute('data-value');
+  });
+};
+
+/**
  * Filter shuffle based on the current state of filters.
  */
 Demo.prototype.filter = function () {
@@ -224,10 +240,11 @@ Demo.prototype.itemPassesFilters = function (element) {
   var categories = this.filters.categories;
   var services = this.filters.services;
   var areas = this.filters.areas;
+  var names = this.filters.names;
   var category = element.getAttribute('data-category');
   var service = element.getAttribute('data-service');
-  console.log(service)
   var area = element.getAttribute('data-area');
+  var name = element.getAttribute('data-name');
 
   // If there are active shape filters and this shape is not in that array.
   if (categories.length > 0 && !categories.includes(category)) {
@@ -241,6 +258,11 @@ Demo.prototype.itemPassesFilters = function (element) {
 
   // If there are active color filters and this color is not in that array.
   if (areas.length > 0 && !areas.includes(area)) {
+    return false;
+  }
+
+  // If there are active color filters and this color is not in that array.
+  if (names.length > 0 && !names.includes(name)) {
     return false;
   }
 

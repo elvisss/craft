@@ -1,0 +1,41 @@
+.float-box {
+	position: fixed;
+	right: 0;
+	top: 120px;
+	z-index: 100;
+	background-color: rgba(black, .8);
+	cursor: pointer;
+	opacity: 1;
+	transition: all 0.5s ease-in-out;
+	&.float-hide {
+		opacity: 0;
+	}
+	.float-box-content {
+		position: relative;
+		width: 100px;
+		height: 120px;
+		text-align: center;
+		figure {
+			margin: 0;
+			img {
+				height: 70px;
+			}
+			figcaption {
+				color: $c-green-regular;
+				font-size: 18px;
+				line-height: 18px;
+			}
+		}
+		&:after {
+			position: absolute;
+			content: '';
+			left: -30px;
+			top: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 60px 30px 60px 0;
+			border-color: transparent rgba(black, .8) transparent transparent;
+		}
+	}
+}
