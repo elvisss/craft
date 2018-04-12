@@ -2,18 +2,35 @@
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	right: -780px;
-	// right: 0;
 	z-index: 20;
-	width: 560px;
-	background-color: rgba(black, .8);
+	right: -100%;
+	width: 100%;
 	transition: all 0.5s ease-in-out;
+	overflow: auto;
+	@include media-breakpoint-up(md) {
+		background-color: rgba(black, .8);
+		right: -780px;
+		width: 560px;
+		overflow: visible;
+	}
 	&.float-form-show {
 		right: 0;
 	}
 	.float-form-content {
+		background-color: black;
 		position: relative;
-		height: 100%;
+		padding: 15px;
+		margin: 10px;
+		height: auto;
+		@include media-breakpoint-up(md) {
+			background-color: transparent;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		.modal-header {
+			border-bottom: medium none;
+		}
 		.float-triangle {
 			position: absolute;
 			content: '';
@@ -25,11 +42,51 @@
 			// border-width: 482.5px 220px 482.5px 0;
 			border-color: transparent rgba(black, .8) transparent transparent;
 		}
+		.float-close {
+			position: relative;
+			.close {
+				color: #fff;
+				padding: 20px;
+			}
+			@include media-breakpoint-up(md) {
+				position: absolute;
+				top: 15px;
+				right: 15px;
+			}
+		}
 	}
 	.float-form-wrap {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		width: 100%;
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+		}
+	}
+}
+
+.float-body-form {
+	max-width: 450px;
+	margin: 0 auto;
+	padding: 0 20px;
+	h2 {
+		font-size: 26px;
+		color: $c-green-medium;
+		margin-bottom: 30px;
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
+	}
+	form {
+		margin-bottom: 5px;
+	}
+	.form-group {
+		label {
+			font-family: $font-family-light;
+			font-size: 20px;
+			color: white;
+		}
+		margin-bottom: .5rem;
 	}
 }

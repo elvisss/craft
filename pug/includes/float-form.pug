@@ -6,9 +6,13 @@
 
 .float-form
     .float-form-content
-        .float-triangle
+        .float-close.js-close-form
+            .modal-header
+                button.close(type="button", data-dismiss="modal", aria-label="Close")
+                    span(aria-hidden="true") &times;
+        .float-triangle.d-none.d-md-block
         .float-form-wrap
-            .contact-body-form.float-body-form
+            .float-body-form
                 form
                     h2 CUÉNTANOS DE TU PROYECTO
                     .row
@@ -48,4 +52,4 @@
                                 label Mensaje
                                 textarea.form-control(rows="4")
                         .col-12
-                            button.btn.btn-block.btn-transparent(type="submit") ENVIAR
+                            button.btn.btn-block.btn-green(type="submit") ENVIAR
