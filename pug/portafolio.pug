@@ -1,7 +1,6 @@
 doctype html
 html(lang='es')
   include includes/head.pug
-  link(rel="stylesheet", href="css/shuffle.css")
   body
     include includes/header.pug
 
@@ -17,9 +16,9 @@ html(lang='es')
                 .sidebar-content
                   .widget-filter
                     .js-categories
-                      button.btn.btn-block.btn-white(data-value='architecture')
+                      button#js-architecture.btn.btn-block.btn-white(data-value='architecture')
                         span ARQUITECTURA
-                      button.btn.btn-block.btn-white(data-value='construction')
+                      button#js-construction.btn.btn-block.btn-white(data-value='construction')
                         span CONSTRUCCIÓN
                   .widget-filter
                     h2.title-widget PROYECTO
@@ -55,17 +54,17 @@ html(lang='es')
                     h2.title-widget SERVICIO
                     .js-service
                       ul.list-bullet
-                        li(data-value='conceptualizacion')
+                        li#js-office(data-value='office')
                           span OFICINAS
-                        li(data-value='distribucion')
+                        li#js-retail(data-value='retail')
                           span RETAIL
-                        li(data-value='project')
+                        li#js-project(data-value='project')
                           span PROYECTO
-                        li(data-value='design')
+                        li#js-design(data-value='design')
                           span DISEÑO
-                        li(data-value='development')
+                        li#js-development(data-value='development')
                           span DESARROLLO
-                        li(data-value='ejecution')
+                        li#js-ejecution(data-value='ejecution')
                           span EJECUCIÓN
                   .widget-filter
                     h2.title-widget ÁREA
@@ -81,8 +80,8 @@ html(lang='es')
                 .row.no-gutters.shape-shuffle-container.js-shuffle
 
                   mixin project(val, index)
-                    .single-project.col-6.col-md-4.col-lg-2(data-category=val.groups, data-name=val.name, data-client=val.client, data-service=val.services, data-date-created='2017-04-30', data-area=val.area)
-                      .aspect(data-target=".modal-portfolio", data-toggle="modal")
+                    .single-project.col-6.col-md-4.col-lg-2(data-architecture=val.architecture, data-construction=val.construction, data-category=val.groups, data-name=val.name, data-client=val.client, data-services=val.services, data-office=val.office, data-retail=val.retail, data-date-created='2017-04-30', data-area=val.area, data-project=val.project)
+                      .aspect(data-target=".modal-portfolio", data-toggle="modal", style="background-image: url(" + val.logo + ")")
                         .media-container
                           .media-content
                             .media(style='background-image: url("http://www.studiogusto.com/en/wp-content/uploads/sites/2/2013/10/peter.jpg")')
@@ -99,7 +98,7 @@ html(lang='es')
           #grid-portfolio.row.no-gutters.my-shuffle-container
 
             mixin project(val, index)
-              .box-portfolio.col-12.col-md-1.picture-item(data-groups='["' + val.groups + '"]', data-date-created='2017-04-30', data-client=val.client, data-status=val.status, data-area=val.area, data-services=val.services)
+              .box-portfolio.col-12.col-md-1.picture-item(data-groups='["' + val.groups + '"]', data-date-created=val.date, data-client=val.client, data-status=val.status, data-area=val.area, data-services=val.services, data-name=val.name)
                 .box-content(data-target=".modal-portfolio", data-toggle="modal")
                   .box-images
                     .box-img.bottom(style="background-image: url('" + val.thumbnail + "')")
@@ -128,7 +127,7 @@ html(lang='es')
                   | CRONOLÓGICO
               .sort-option
                 label
-                  input(type='radio', name='sort-value', value='client')
+                  input(type='radio', name='sort-value', value='name')
                   | CLIENTE
               .sort-option
                 label
@@ -183,31 +182,31 @@ html(lang='es')
 
                       ul.project-services.clearfix
                         li.project-service.active
-                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          img.d-none.d-md-block(src="./images/process/proceso1.svg", alt="")
                           .project-service-text Conceptualización
                         li.project-service.active
-                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          img.d-none.d-md-block(src="./images/process/proceso2.svg", alt="")
                           .project-service-text Distribución Espacial
                         li.project-service.active
-                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          img.d-none.d-md-block(src="./images/process/proceso3.svg", alt="")
                           .project-service-text Ingenierias de detalle
                         li.project-service
-                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          img.d-none.d-md-block(src="./images/process/proceso4.svg", alt="")
                           .project-service-text Planimetría arquitectónica
                         li.project-service
-                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          img.d-none.d-md-block(src="./images/process/proceso5.svg", alt="")
                           .project-service-text Selección de Acabados
                         li.project-service
-                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          img.d-none.d-md-block(src="./images/process/proceso6.svg", alt="")
                           .project-service-text Planificación
                         li.project-service
-                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          img.d-none.d-md-block(src="./images/process/proceso7.svg", alt="")
                           .project-service-text Construcción
                         li.project-service
-                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          img.d-none.d-md-block(src="./images/process/proceso8.svg", alt="")
                           .project-service-text Control de Calidad
                         li.project-service
-                          img.d-none.d-md-block(src="./images/portfolio/services/conceptualizacion.png", alt="")
+                          img.d-none.d-md-block(src="./images/process/proceso9.svg", alt="")
                           .project-service-text Cierre
                   .project-toggle.d-none.d-md-block
                     a.summary-toggle(href="#")

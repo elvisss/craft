@@ -150,7 +150,7 @@
         opacity: 1;
       }
       @include media-breakpoint-up(md) {
-        height: 210px;
+        height: auto;
       }
       .box-service-wrap-content {
         padding: 20px 0;

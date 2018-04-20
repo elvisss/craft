@@ -72,7 +72,7 @@
 	h2 {
 		font-size: 26px;
 		color: $c-green-medium;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 		text-align: center;
 		@include media-breakpoint-up(md) {
 			text-align: left;
@@ -80,13 +80,40 @@
 	}
 	form {
 		margin-bottom: 5px;
+		span.wpcf7-not-valid-tip {
+			color: #ffde00;
+			font-size: 16px;
+			margin-top: 2px;
+		}
+		div.wpcf7-response-output {
+			color: #fff;
+		}
+	}
+	.form-message {
+		font-family: $font-family-light;
+		font-size: 15px;
+		color: white;
+		margin-top: 5px;
 	}
 	.form-group {
+		margin-bottom: .5rem;
 		label {
 			font-family: $font-family-light;
 			font-size: 20px;
 			color: white;
+			margin-bottom: .25rem;
 		}
-		margin-bottom: .5rem;
+	}
+	.field-mandatory {
+		position: relative;
+		&:after {
+			position: absolute;
+			content: "*";
+			left: -13px;
+			top: 3px;
+			font-family: $font-family-light;
+			font-size: 20px;
+			color: #fff;
+		}
 	}
 }

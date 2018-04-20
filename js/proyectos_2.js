@@ -176,19 +176,15 @@ Demo2.prototype._handleSortChange = function (evt) {
   var options = {};
 
   function sortByDate(element) {
-    return element.getAttribute('data-created');
+    return element.getAttribute('data-date-created');
   }
 
   function sortByClient(element) {
-    return element.getAttribute('data-client').toLowerCase();
-  }
-
-  function sortByStatus(element) {
-    return element.getAttribute('data-status').toLowerCase();
+    return element.getAttribute('data-name').toLowerCase();
   }
 
   function sortByArea(element) {
-    return parseInt(element.getAttribute('data-area'));
+    return element.getAttribute('data-area').toLowerCase();
   }
 
   function sortByServices(element) {
@@ -197,18 +193,11 @@ Demo2.prototype._handleSortChange = function (evt) {
 
   if (value === 'date-created') {
     options = {
-      reverse: true,
-      by: sortByDate,
+      by: sortByDate
     };
-  } else if (value === 'client') {
+  } else if (value === 'name') {
     options = {
-      reverse: true,
-      by: sortByClient,
-    };
-  } else if (value === 'status') {
-    options = {
-      reverse: true,
-      by: sortByStatus,
+      by: sortByClient
     };
   } else if (value === 'area') {
     options = {
@@ -217,7 +206,6 @@ Demo2.prototype._handleSortChange = function (evt) {
     };
   } else if (value === 'services') {
     options = {
-      reverse: true,
       by: sortByServices,
     };
   }

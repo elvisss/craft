@@ -1,4 +1,6 @@
 .btn {
+  cursor: pointer;
+  transition: .2s ease-out;
 	@include transition(.5s);
   &.btn-black {
     background-color: $c-dark-gray;
@@ -22,5 +24,17 @@
   		background-color: $c-green-medium;
       border-color: $c-green-medium;
   	}
+  }
+  &.btn-white {
+    border: 1px solid #34495e;
+    font-size: 1rem;
+    padding: .75em .8em;
+    border-radius: 3px;
+    background-color: rgba(52, 73, 94, 0);
+    &.active, &:hover, &:active {
+      background-color: #34495e;
+      color: #fff;
+      text-decoration: none;
+    }
   }
 }

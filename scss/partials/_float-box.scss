@@ -1,7 +1,7 @@
 .float-box {
 	position: fixed;
 	right: 0;
-	top: 120px;
+	top: 90px;
 	z-index: 100;
 	background-color: rgba(black, .8);
 	cursor: pointer;
@@ -10,32 +10,52 @@
 	&.float-hide {
 		opacity: 0;
 	}
+	@include media-breakpoint-up(md) {
+		top: 120px;
+	}
 	.float-box-content {
 		position: relative;
-		width: 100px;
-		height: 120px;
+		width: 50px;
+		height: 60px;
 		text-align: center;
+		@include media-breakpoint-up(md) {
+			width: 100px;
+			height: 120px;
+		}
 		figure {
 			margin: 0;
 			img {
-				height: 70px;
+				height: 35px;
 			}
 			figcaption {
 				color: $c-green-regular;
-				font-size: 18px;
-				line-height: 18px;
+				font-size: 9px;
+				line-height: 9px;
+			}
+			@include media-breakpoint-up(md) {
+				img {
+					height: 70px;
+				}
+				figcaption {
+					font-size: 18px;
+					line-height: 18px;
+				}
 			}
 		}
 		&:after {
 			position: absolute;
 			content: '';
-			left: -30px;
+			left: -15px;
 			top: 0;
 			width: 0;
 			height: 0;
 			border-style: solid;
-			border-width: 60px 30px 60px 0;
+			border-width: 30px 15px 30px 0;
 			border-color: transparent rgba(black, .8) transparent transparent;
+			@include media-breakpoint-up(md) {
+				left: -30px;
+				border-width: 60px 30px 60px 0;
+			}
 		}
 	}
 }
