@@ -68,14 +68,17 @@
             padding-left: 0;
           }
           .project-service {
+            display: none;
             @include media-breakpoint-up(md) {
               width: 37.5%;
               float: left;
               opacity: .3;
               margin-bottom: 18px;
+              display: block;
             }
             &.active {
               opacity: 1;
+              display: block;
             }
             img {
               height: 61px;
