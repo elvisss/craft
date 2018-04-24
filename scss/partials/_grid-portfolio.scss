@@ -29,7 +29,6 @@
       }
       @include transition(all .25s ease-in-out);
       .box-img {
-        background-color: black;
         @include transition(opacity .5s ease-in-out)
         position: absolute;
         left: 0;
