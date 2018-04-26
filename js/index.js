@@ -231,14 +231,14 @@ var gmapStyle = [
 ];
 
 // The latitude and longitude of your business / place
-var position = [-12101419, -77047607];
+var position = [-12.0971674, -77.0573818];
 
 function showGoogleMaps() {
 
     var latLng = new google.maps.LatLng(position[0], position[1]);
 
     var mapOptions = {
-        zoom: 16, // initialize zoom level - the max value is 21
+        zoom: 15, // initialize zoom level - the max value is 21
         streetViewControl: false, // hide the yellow Street View pegman
         scaleControl: true, // allow users to zoom the Google Map
         mapTypeId: google.maps.MapTypeId.ROADMAP,
