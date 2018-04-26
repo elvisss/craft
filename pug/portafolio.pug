@@ -116,26 +116,21 @@ html(lang='es')
         .actions-projects
           .filter-projects
             .filter-options.clearfix
-              a(href="javascript:void(0)", data-group='architecture') ARQUITECTURA
-              a(href="javascript:void(0)", data-group='construction') CONSTRUCCIÓN
-              a.d-none.d-md-inline-block(href="javascript:void(0)", data-group='all') MOSTRAR TODOS
+              a.brw(href="javascript:void(0)", data-group='architecture') ARQUITECTURA
+              a.blw(href="javascript:void(0)", data-group='construction') CONSTRUCCIÓN
           .sort-projects
             .sort-options
               .sort-option
-                label
-                  input(type='radio', name='sort-value', value='date-created')
-                  | CRONOLÓGICO
-              .sort-option
-                label
-                  input(type='radio', name='sort-value', value='name')
+                label(for="sort-customer")
+                  input(type='radio', name='sort-value', value='name', id='sort-customer')
                   | CLIENTE
               .sort-option
-                label
-                  input(type='radio', name='sort-value', value='services')
+                label(for="sort-services")
+                  input(type='radio', name='sort-value', value='services', id='sort-services')
                   | SERVICIO
               .sort-option
-                label
-                  input(type='radio', name='sort-value', value='area')
+                label(for="sort-area")
+                  input(type='radio', name='sort-value', value='area', id='sort-area')
                   | ÁREA
 
     .modal.fade.modal-portfolio(tabindex='-1', role='dialog', aria-hidden='true')

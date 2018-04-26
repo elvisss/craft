@@ -7,7 +7,7 @@ html(lang='es')
     include includes/float-form.pug
 
     section.fluid-full-section
-      .main-wrapper
+      .main-wrapper.main-sm-wrapper
         #googlemaps
         #box-contact
           .body-contact
@@ -47,26 +47,35 @@ html(lang='es')
                   button.close(type="button", data-dismiss="modal", aria-label="Close")
                     span(aria-hidden="true") &times;
                 .modal-body
-                    .contact-body-form
+                    .contact-body-form.valid-body-form
                       form
                         h2 CUÉNTANOS DE TU PROYECTO
                         .row
                           .col-12.col-md-6
                             .form-group
-                              label Nombre
+                              .field-mandatory
+                                label Nombre
                               input.form-control(type="text", placeholder="")
                           .col-12.col-md-6
                             .form-group
-                              label E-mail
+                              label
+                                .field-mandatory E-mail
                               input.form-control(type="email", placeholder="")
                           .col-12.col-md-6
                             .form-group
-                              label Empresa
-                              input.form-control(type="text", placeholder="")
+                              label
+                                .field-mandatory Tipo de Proyecto
+                              select.form-control
+                                option OFICINA
+                                option RETAIL
                           .col-12.col-md-6
                             .form-group
-                              label Tamaño del proyecto (m<sup>2</sup>)
-                              input.form-control(type="number", placeholder="")
+                              label
+                                .field-mandatory Área del proyecto (m<sup>2</sup>)
+                              select.form-control
+                                option MENOS DE 100
+                                option DE 100 A 500
+                                option DE 500 A MÁS
                           .col-12.col-md-6
                             .form-group
                               label Servicio requerido
@@ -84,6 +93,7 @@ html(lang='es')
                               textarea.form-control(rows="4")
                           .col-12
                             button.btn.btn-block.btn-transparent(type="submit") COTIZAR
+                        .form-message *Campos obligatorios
 
     .modal.fade.modal.work-us(tabindex='-1', role='dialog', aria-hidden='true')
         .modal-dialog.modal-lg

@@ -76,6 +76,11 @@
               margin-bottom: 18px;
               display: block;
             }
+            @include media-breakpoint-down(sm) {
+              &:before {
+                content: '✓';
+              }
+            }
             &.active {
               opacity: 1;
               display: block;

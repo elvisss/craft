@@ -1,6 +1,8 @@
+$height-mobile: 190px;
+
 #portfolio-2 {
   position: relative;
-  padding-top: 190px;
+  padding-top: $height-mobile;
   padding-bottom: 0;
   @include media-breakpoint-up(md) {
     padding-top: 0;
@@ -17,7 +19,7 @@
     }
   }
   .actions-projects {
-    height: 190px;
+    height: $height-mobile;
     position: absolute;
     left: 0;
     right: 0;
@@ -41,6 +43,12 @@
         &.active {
           background-color: white;
         }
+        &.brw {
+          border-right: 1px solid white;
+        }
+        &.blw {
+          border-left: 1px solid white;
+        }
         @include media-breakpoint-up(md) {
           float: none;
           width: auto;
@@ -59,24 +67,39 @@
       }
       .sort-option {
         display: block;
-        padding: 2px 0;
+        margin: 5px 0;
+        position: relative;
         @include media-breakpoint-up(md) {
           display: inline-block;
         }
-        &:hover, &.active {
+        &.active {
+          &:before {
+            background-image: url('./../images/bullet-active.png');
+          }
           label {
             color: $c-green-regular;
           }
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-image: url('./../images/bullet-desactive.png');
+          width: 26px;
+          height: 28px;
         }
       }
       label {
         display: inline-block;
         color: $c-gray;
-        font-size: 15px;
+        font-size: 16px;
         font-family: $font-family-roman;
-        padding: 0 20px;
+        padding-left: 35px;
         cursor: pointer;
         margin: 0;
+        height: 28px;
+        line-height: 28px;
         input[type="radio"] {
           clip: rect(0,0,0,0);
           pointer-events: none;

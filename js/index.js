@@ -231,7 +231,7 @@ var gmapStyle = [
 ];
 
 // The latitude and longitude of your business / place
-var position = [27.1959739, 78.02423269999997];
+var position = [-12101419, -77047607];
 
 function showGoogleMaps() {
 
