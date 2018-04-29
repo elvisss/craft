@@ -19,13 +19,13 @@ $(function(){
 $('body').on('shown.bs.modal', '.modal-project-1', function() {
   var portfolioSwiper = new Swiper('#project-slider-1', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -33,13 +33,13 @@ $('body').on('shown.bs.modal', '.modal-project-1', function() {
 $('body').on('shown.bs.modal', '.modal-project-2', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-2', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -47,13 +47,13 @@ $('body').on('shown.bs.modal', '.modal-project-2', function() {
 $('body').on('shown.bs.modal', '.modal-project-3', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-3', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -61,13 +61,13 @@ $('body').on('shown.bs.modal', '.modal-project-3', function() {
 $('body').on('shown.bs.modal', '.modal-project-4', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-4', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -75,13 +75,13 @@ $('body').on('shown.bs.modal', '.modal-project-4', function() {
 $('body').on('shown.bs.modal', '.modal-project-5', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-5', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -89,13 +89,13 @@ $('body').on('shown.bs.modal', '.modal-project-5', function() {
 $('body').on('shown.bs.modal', '.modal-project-6', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-6', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -103,13 +103,13 @@ $('body').on('shown.bs.modal', '.modal-project-6', function() {
 $('body').on('shown.bs.modal', '.modal-project-7', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-7', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -117,13 +117,13 @@ $('body').on('shown.bs.modal', '.modal-project-7', function() {
 $('body').on('shown.bs.modal', '.modal-project-8', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-8', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -131,13 +131,13 @@ $('body').on('shown.bs.modal', '.modal-project-8', function() {
 $('body').on('shown.bs.modal', '.modal-project-9', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-9', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -145,13 +145,13 @@ $('body').on('shown.bs.modal', '.modal-project-9', function() {
 $('body').on('shown.bs.modal', '.modal-project-10', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-10', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -159,13 +159,13 @@ $('body').on('shown.bs.modal', '.modal-project-10', function() {
 $('body').on('shown.bs.modal', '.modal-project-11', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-11', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -173,13 +173,13 @@ $('body').on('shown.bs.modal', '.modal-project-11', function() {
 $('body').on('shown.bs.modal', '.modal-project-12', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-12', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -187,13 +187,13 @@ $('body').on('shown.bs.modal', '.modal-project-12', function() {
 $('body').on('shown.bs.modal', '.modal-project-13', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-13', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -201,13 +201,13 @@ $('body').on('shown.bs.modal', '.modal-project-13', function() {
 $('body').on('shown.bs.modal', '.modal-project-14', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-14', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -215,13 +215,13 @@ $('body').on('shown.bs.modal', '.modal-project-14', function() {
 $('body').on('shown.bs.modal', '.modal-project-15', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-15', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -229,13 +229,13 @@ $('body').on('shown.bs.modal', '.modal-project-15', function() {
 $('body').on('shown.bs.modal', '.modal-project-16', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-16', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -243,13 +243,13 @@ $('body').on('shown.bs.modal', '.modal-project-16', function() {
 $('body').on('shown.bs.modal', '.modal-project-17', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-17', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -257,13 +257,13 @@ $('body').on('shown.bs.modal', '.modal-project-17', function() {
 $('body').on('shown.bs.modal', '.modal-project-18', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-18', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -271,13 +271,13 @@ $('body').on('shown.bs.modal', '.modal-project-18', function() {
 $('body').on('shown.bs.modal', '.modal-project-19', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-19', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -285,13 +285,13 @@ $('body').on('shown.bs.modal', '.modal-project-19', function() {
 $('body').on('shown.bs.modal', '.modal-project-20', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-20', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -299,13 +299,13 @@ $('body').on('shown.bs.modal', '.modal-project-20', function() {
 $('body').on('shown.bs.modal', '.modal-project-21', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-21', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -313,13 +313,13 @@ $('body').on('shown.bs.modal', '.modal-project-21', function() {
 $('body').on('shown.bs.modal', '.modal-project-22', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-22', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -327,13 +327,13 @@ $('body').on('shown.bs.modal', '.modal-project-22', function() {
 $('body').on('shown.bs.modal', '.modal-project-23', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-23', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -341,13 +341,13 @@ $('body').on('shown.bs.modal', '.modal-project-23', function() {
 $('body').on('shown.bs.modal', '.modal-project-24', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-24', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -355,13 +355,13 @@ $('body').on('shown.bs.modal', '.modal-project-24', function() {
 $('body').on('shown.bs.modal', '.modal-project-25', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-25', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -369,13 +369,13 @@ $('body').on('shown.bs.modal', '.modal-project-25', function() {
 $('body').on('shown.bs.modal', '.modal-project-26', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-26', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -383,13 +383,13 @@ $('body').on('shown.bs.modal', '.modal-project-26', function() {
 $('body').on('shown.bs.modal', '.modal-project-27', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-27', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -397,13 +397,13 @@ $('body').on('shown.bs.modal', '.modal-project-27', function() {
 $('body').on('shown.bs.modal', '.modal-project-28', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-28', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -411,13 +411,13 @@ $('body').on('shown.bs.modal', '.modal-project-28', function() {
 $('body').on('shown.bs.modal', '.modal-project-29', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-29', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -425,13 +425,13 @@ $('body').on('shown.bs.modal', '.modal-project-29', function() {
 $('body').on('shown.bs.modal', '.modal-project-30', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-30', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -439,13 +439,13 @@ $('body').on('shown.bs.modal', '.modal-project-30', function() {
 $('body').on('shown.bs.modal', '.modal-project-31', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-31', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -453,13 +453,13 @@ $('body').on('shown.bs.modal', '.modal-project-31', function() {
 $('body').on('shown.bs.modal', '.modal-project-32', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-32', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -467,13 +467,13 @@ $('body').on('shown.bs.modal', '.modal-project-32', function() {
 $('body').on('shown.bs.modal', '.modal-project-33', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-33', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -481,13 +481,13 @@ $('body').on('shown.bs.modal', '.modal-project-33', function() {
 $('body').on('shown.bs.modal', '.modal-project-34', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-34', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -495,13 +495,13 @@ $('body').on('shown.bs.modal', '.modal-project-34', function() {
 $('body').on('shown.bs.modal', '.modal-project-35', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-35', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -509,13 +509,13 @@ $('body').on('shown.bs.modal', '.modal-project-35', function() {
 $('body').on('shown.bs.modal', '.modal-project-36', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-36', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -523,13 +523,13 @@ $('body').on('shown.bs.modal', '.modal-project-36', function() {
 $('body').on('shown.bs.modal', '.modal-project-37', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-37', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -537,13 +537,13 @@ $('body').on('shown.bs.modal', '.modal-project-37', function() {
 $('body').on('shown.bs.modal', '.modal-project-38', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-38', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -551,13 +551,13 @@ $('body').on('shown.bs.modal', '.modal-project-38', function() {
 $('body').on('shown.bs.modal', '.modal-project-39', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-39', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -565,13 +565,13 @@ $('body').on('shown.bs.modal', '.modal-project-39', function() {
 $('body').on('shown.bs.modal', '.modal-project-40', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-40', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -579,13 +579,13 @@ $('body').on('shown.bs.modal', '.modal-project-40', function() {
 $('body').on('shown.bs.modal', '.modal-project-41', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-41', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -593,13 +593,13 @@ $('body').on('shown.bs.modal', '.modal-project-41', function() {
 $('body').on('shown.bs.modal', '.modal-project-42', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-42', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -607,13 +607,13 @@ $('body').on('shown.bs.modal', '.modal-project-42', function() {
 $('body').on('shown.bs.modal', '.modal-project-43', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-43', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -621,13 +621,13 @@ $('body').on('shown.bs.modal', '.modal-project-43', function() {
 $('body').on('shown.bs.modal', '.modal-project-44', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-44', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -635,13 +635,13 @@ $('body').on('shown.bs.modal', '.modal-project-44', function() {
 $('body').on('shown.bs.modal', '.modal-project-45', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-45', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -649,13 +649,13 @@ $('body').on('shown.bs.modal', '.modal-project-45', function() {
 $('body').on('shown.bs.modal', '.modal-project-46', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-46', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -663,13 +663,13 @@ $('body').on('shown.bs.modal', '.modal-project-46', function() {
 $('body').on('shown.bs.modal', '.modal-project-47', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-47', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -677,13 +677,13 @@ $('body').on('shown.bs.modal', '.modal-project-47', function() {
 $('body').on('shown.bs.modal', '.modal-project-48', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-48', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -691,13 +691,13 @@ $('body').on('shown.bs.modal', '.modal-project-48', function() {
 $('body').on('shown.bs.modal', '.modal-project-49', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-49', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
@@ -705,13 +705,13 @@ $('body').on('shown.bs.modal', '.modal-project-49', function() {
 $('body').on('shown.bs.modal', '.modal-project-50', function() {
   var portfolioSwiper2 = new Swiper('#project-slider-50', {
     autoplay: {
-      delay: 3000
+      delay: 3000,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
-    autoplayDisableOnInteraction: false,
     loop: true
   });
 });
